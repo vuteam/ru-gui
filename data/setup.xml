@@ -1,0 +1,376 @@
+<setupxml>
+		<setup key="subtitlesetup" title="Subtitle settings">
+			<item level="1" text="Enable teletext caching" description="When enabled, teletext pages will be cached, allowing faster access.">config.usage.enable_tt_caching</item>
+			<item level="2" text="Teletext subtitle color" description="Configure the color of the teletext subtitles.">config.subtitles.ttx_subtitle_colors</item>
+			<item level="2" text="Use original teletext position" description="When enabled, teletext subtitles will be displayed at their original position.">config.subtitles.ttx_subtitle_original_position</item>
+			<item level="2" text="Rewrap subtitles" description="When enabled, reformat subtitles to match the width of the screen.">config.subtitles.subtitle_rewrap</item>
+			<item level="2" text="Subtitle position" description="Configure the vertical position of the subtitles, measured from the bottom of the screen.">config.subtitles.subtitle_position</item>
+			<item level="2" text="Subtitle alignment" description="Configure the horizontal alignment of the subtitles.">config.subtitles.subtitle_alignment</item>
+			<item level="2" text="Subtitle border width" description="Configure the border width of the subtitles. The dark border makes the subtitles easier to read on a light background.">config.subtitles.subtitle_borderwidth</item>
+			<item level="2" text="Show background behind subtitles" description="Configure if behind the subtitles a background is shown.">config.subtitles.showbackground</item>
+			<item level="2" text="Subtitle font size" description="Configure the font size of the subtitles.">config.subtitles.subtitle_fontsize</item>
+			<item level="2" text="Subtitle delay when timing lacks" description="Configure the subtitle delay when timing information is not available.">config.subtitles.subtitle_noPTSrecordingdelay</item>
+			<item level="2" text="Yellow DVB subtitles" description="When enabled, graphical DVB subtitles will be displayed in yellow, instead of the original color.">config.subtitles.dvb_subtitles_yellow</item>
+			<item level="2" text="Use original DVB subtitle position" description="When enabled, graphical DVB subtitles will be displayed at their original position.">config.subtitles.dvb_subtitles_original_position</item>
+			<item level="2" text="Center DVB subtitles" description="When enabled, graphical DVB subtitles will be centered horizontally.">config.subtitles.dvb_subtitles_centered</item>
+			<item level="2" text="Subtitle delay when timing is bad" description="Configure an additional delay to improve subtitle synchronisation.">config.subtitles.subtitle_bad_timing_delay</item>
+			<item level="2" text="DVB subtitle black transparency" description="Configure the transparency of the black background of graphical DVB subtitles.">config.subtitles.dvb_subtitles_backtrans</item>
+			<item level="2" text="External subtitle color" description="Configure the color of the external subtitles, alternative (normal in white, italic in yellow, bold in cyan, underscore in green), white or yellow.">config.subtitles.pango_subtitle_colors</item>
+			<item level="2" text="External subtitle switch fonts" description="Configure if the subtitle should switch between normal, italic, bold and bolditalic">config.subtitles.pango_subtitle_fontswitch</item>
+			<item level="2" text="External subtitle dialog colorization" description="Replace `- ` in dialogs with colored text per speaker (like teletext subtitles for the hearing impaired)">config.subtitles.colourise_dialogs</item>
+			<item level="2" text="Delay for external subtitles" description="Configure an additional delay to improve external subtitle synchronisation.">config.subtitles.pango_subtitles_delay</item>
+			<item level="2" text="Set fps for external subtitles" description="Can be used for different fps between external subtitles and video.">config.subtitles.pango_subtitles_fps</item>
+			<item level="2" text="Automatically turn on external subtitles" description="When enabled, external subtitles will be always turned on for playback movie.">config.subtitles.pango_autoturnon</item>
+		</setup>
+		<setup key="autolanguagesetup" title="Auto language selection">
+			<item level="1" text="Audio language selection 1" description="Configure the first audio language (highest priority).">config.autolanguage.audio_autoselect1</item>
+			<item level="1" text="Audio language selection 2" description="Configure the second audio language.">config.autolanguage.audio_autoselect2</item>
+			<item level="1" text="Audio language selection 3" description="Configure the third audio language.">config.autolanguage.audio_autoselect3</item>
+			<item level="1" text="Audio language selection 4" description="Configure the fourth audio language.">config.autolanguage.audio_autoselect4</item>
+			<item level="1" text="Prefer AC3 track" description="When enabled, the receiver will select an AC3 track (when available).">config.autolanguage.audio_defaultac3</item>
+			<item level="1" text="Prefer AC3+ track" description="When enabled, the receiver will select an AC3+ track (when available).">config.autolanguage.audio_defaultddp</item>
+			<item level="1" text="Prefer audio track stored by service" description="When enabled, the receiver will automatically use the audio track which you selected before.">config.autolanguage.audio_usecache</item>
+			<item level="1" text="Subtitle language selection 1" description="Configure the first subtitle language (highest priority).">config.autolanguage.subtitle_autoselect1</item>
+			<item level="1" text="Subtitle language selection 2" description="Configure the second subtitle language.">config.autolanguage.subtitle_autoselect2</item>
+			<item level="1" text="Subtitle language selection 3" description="Configure the third subtitle language.">config.autolanguage.subtitle_autoselect3</item>
+			<item level="1" text="Subtitle language selection 4" description="Configure the fourth subtitle language.">config.autolanguage.subtitle_autoselect4</item>
+			<item level="1" text="Allow subtitle language to equal audio language" description="Usually when the subtitle language is the same as the audio language, the subtitles will not be used. Enable this option to allow these subtitles to be used.">config.autolanguage.equal_languages</item>
+			<item level="1" text="Allow subtitles for hearing impaired" description="When enabled, subtitles for the hearing impaired can be used.">config.autolanguage.subtitle_hearingimpaired</item>
+			<item level="1" text="Prefer subtitles for hearing impaired" description="When enabled, subtitles for the hearing impaired will be preferred over normal subtitles, when both types are available.">config.autolanguage.subtitle_defaultimpaired</item>
+			<item level="1" text="Prefer graphical DVB subtitles" description="When enabled, graphical DVB subtitles are preferred over teletext subtitles, when both types are available.">config.autolanguage.subtitle_defaultdvb</item>
+			<item level="1" text="Prefer subtitles stored by service" description="When enabled, the receiver will automatically use the subtitles which you selected before.">config.autolanguage.subtitle_usecache</item>
+			<item level="1" text="EPG language selection 1" description="Configure the primary EPG language.">config.autolanguage.audio_epglanguage</item>
+			<item level="1" text="EPG language selection 2" description="Configure the secondary EPG language.">config.autolanguage.audio_epglanguage_alternative</item>
+		</setup>
+		<setup key="tvinfobar" title="TV infobar setup">
+			<item level="2" text="Infobar mode" description="Configure the infobar display mode at the short and long pressing the control button">config.usage.infobar_mode</item>
+			<item level="0" text="Infobar timeout" description="Configure how long the infobar will remain visible after activation.">config.usage.infobar_timeout</item>
+			<item level="1" text="Enable effect of infobar fading" description="When enabled, the infobar will smoothly changes its transparency.">config.misc.fadeShowInfobar</item>
+			<item level="1" text="Enable animation for infobar" description="When enabled, the infobar will smoothly slides out of the bottom of the screen.">config.misc.enableAnimationInfobar</item>
+			<item level="1" text="Style of infobar clock" description="Configure the clock display mode style in infobar.">config.usage.style_clock_of_infobar</item>
+			<item level="2" text="Show infobar on channel change" description="When enabled, the infobar will be displayed when changing channels.">config.usage.show_infobar_on_zap</item>
+			<item level="2" text="Show infobar on event change" description="When enabled, the infobar will be displayed when a new event starts.">config.usage.show_infobar_on_event_change</item>
+			
+			<item level="2" text="Show satellite name on infobar" description="When enabled, the name of the satellite will be displayed on the infobar.">config.usage.show_sat_name_of_infobar</item>
+			<item level="2" text="Show orbital position on infobar" description="When enabled, the orbital position will be displayed on the infobar.">config.usage.show_orbital_position_of_infobar</item>
+			<item level="2" text="Show coding ID and provider ID on infobar" description="When enabled, the coding ID and provider ID will be displayed on the infobar.">config.usage.show_caid_provid_of_infobar</item>
+			<item level="2" text="Show all current coding channel on infobar" description="When enabled, all current coding channel will be displayed on the infobar.">config.usage.show_all_coding_of_infobar</item>
+			
+			<item level="1" text="Added infobar mode" description="Configure the display mode for additional infobar at the short and long pressing the control button.">config.usage.added_infobar_mode</item>
+			<item level="1" text="Show added infobar if infobar mode" description="Configure the display mode for additional infobar depending on the mode of the main infobar.">config.usage.added_infobar_show_mode</item>
+			<item level="1" text="Enable animation for added infobar" description="When enabled, additional infobar will smoothly slides out of the bottom of the screen.">config.misc.enableAnimationAddInfobar</item>
+			
+			<item level="2" text="Show SNR percentage instead of dB value" description="By default, SNR will be shown in dB (when supported by the tuner). This setting forces SNR to be shown as a percentage instead.">config.usage.swap_snr_on_osd</item>
+		</setup>
+		<setup key="movieinfobar" title="Movie infobar setup">
+			<item level="2" text="Infobar mode" description="Configure the infobar display mode at the short and long pressing the control button.">config.usage.infobar_movie_mode</item>
+			<item level="0" text="Infobar timeout" description="Configure how long the infobar will remain visible after activation.">config.usage.infobar_movie_timeout</item>
+			<item level="1" text="Enable effect of infobar fading" description="When enabled, the infobar will smoothly changes its transparency.">config.misc.fadeShowInfobarMovie</item>
+			<item level="1" text="Enable animation for infobar" description="When enabled, the infobar will smoothly slides out of the bottom of the screen.">config.misc.enableAnimationInfobarMovie</item>
+			<item level="1" text="Style of infobar clock" description="Configure the clock display mode style in infobar.">config.usage.style_clock_of_infobar_movie</item>
+			<item level="2" text="Show infobar on skip forward/backward" description="When enabled, the infobar will be displayed when skipping forwards/backwards during media playback.">config.usage.show_infobar_on_skip</item>
+			
+			<item level="1" text="Added infobar mode" description="Configure the display mode for additional infobar at the short and long pressing the control button.">config.usage.added_infobar_mode_movie</item>
+			<item level="1" text="Show added infobar if infobar mode" description="Configure the display mode additional infobar depending on the mode of the main infobar.">config.usage.added_infobar_movie_show_mode</item>
+			<item level="1" text="Enable animation for added infobar" description="When enabled, additional infobar will smoothly slides out of the bottom of the screen.">config.misc.enableAnimationAddInfobarMovie</item>
+		</setup>
+		<setup key="medialibrary" title="Customize library">
+			<item level="1" text="Behavior when you open one video file in media-manager" description="Configure the behavior of the media manager when you open one media file in media-manager for play.">config.usage.manager_behavior_if_media_file_one</item>
+			<item level="1" text="Behavior when you add media files to the library" description="Configure the behavior of the media manager when you add media files to your local library.">config.usage.behavior_added_media_files_to_library</item>
+			<item level="2" text="A storage device for library" description="Configure the storage device to the library." requires="WebDav">config.webdav.medialibrary</item>
+			<item level="0" text="Used library by default for movies" description="Configure which library to use by default for movies." >config.usage.defaultmedialibrary</item>
+			<item level="2" text="Scan subfolders external media" description="When enabled, when you add files to the library will scan all subfolders of the selected folder.">config.usage.recursively_scan_root</item>
+			<item level="0" text="Open media manager when inserting USB-flash" description="When enabled, when inserting USB-flash will open the media manager and display recorded on USB-flash content.">config.mediamanager.usbautoopen</item>
+			<item level="2" text="Read tags when you add music files to the library" description="When enabled, when you add music files to the library will be read tags that will slow down the process.">config.usage.behavior_added_music_files_to_library_read_tag</item>
+			<item level="2" text="Read tags when you add video files to the library" description="When enabled, when you add video files to the library will be read tags that will slow down the process.">config.usage.behavior_added_movie_files_to_library_read_tag</item>
+			<item level="2" text="Read tags when you add dvd to the library" description="When enabled, when you add dvd files to the library will be read tags that will slow down the process.">config.usage.behavior_added_dvd_files_to_library_read_tag</item>
+			<item level="2" text="Read tags when you add blu-ray disk to the library" description="When enabled, when you add blu-ray files to the library will be read tags that will slow down the process.">config.usage.behavior_added_bd_files_to_library_read_tag</item>
+
+			<item level="0" text="Sharing local media render" description="When enabled, the local media render will be available on the local network to all devices supporting the DLNA standard." requires="UPnPRenderer">config.sources.sharingmediarender</item>
+			<item level="0" text="Sharing local library" description="When enabled, the local library will be available on the local network to all devices supporting the DLNA standard." requires="UPnPMLServer">config.sources.sharinglocalmedialibrary</item>
+			<item level="0" text="Sharing local TV channels" description="When enabled, the local TV channels will be available on the local network to all devices supporting the DLNA standard." requires="UPnPTVServer">config.sources.sharinglocaltvchannels</item>
+
+			<item level="0" text="Zap the shared TV channels" description="When enabled, when you select a shared channel to another device, the local channel will also switch.">config.sources.sharingzapchannel</item>
+			<item level="0" text="Transcoding the shared tv channels" description="When enabled, when choosing transcoding common channel to another device, the transport stream channel will be transcoded." requires="Transcoding">config.sources.transcoding</item>
+			<item level="1" text="Remove items from trash can after (days)" description="Configure the number of days after which items are automaticaly removed from the trash can.">config.usage.movielist_trashcan_days</item>
+			<item level="1" text="Disk space to reserve for recordings (in GB)" description="Configure the minimum amount of disk space to be available for recordings. When the amount of space drops below this value, deleted items will be removed from the trash can.">config.usage.movielist_trashcan_reserve</item>
+			<item level="2" text="Background delete option" description="Configure on which devices the background delete option should be used.">config.misc.erase_flags</item>
+			<item level="2" text="Background delete speed" description="Configure the speed of the background deletion process. Lower speed will consume less hard disk drive performance.">config.misc.erase_speed</item>
+		</setup>
+		<setup key="timezone" title="Timezone">
+			<item level="0" text="Timezone" description="Configure local timezone.">config.timezone.val</item>
+		</setup>
+		<setup key="avsetup" title="A/V settings">
+			<item level="1" text="Auto scart switching"  description="When enabled, scart auto switching mode will be activated." requires="ScartSwitch">config.av.vcrswitch</item>
+			
+			<item level="0" text="Video Output" description="Configure your video format used for video output signal." update="1">config.av.videoport</item>
+			<item level="0" text="Video Mode" description="Configure the mode you used for the selected video format." update="1">config.av.videomode[config.av.videoport.value]</item>
+			<item level="0" text="Resolution/Refresh Rate" description="Configure the resolution/refresh rate you are using for the selected video format.">config.av.videorate[config.av.videomode[config.av.videoport.value].value]</item>
+			<item level="0" text="Color Format" description="Configure color format for TV.">config.av.colorformat</item>
+			<item level="0" text="Aspect Ratio" description="Configure aspect ratio value.">config.av.aspectratio</item>
+			<item level="0" text="TV System" description="Configure tv system mode.">config.av.tvsystem</item>
+			<item level="1" text="WSS on 4:3" description="When enabled, WSS is on in 4:3 mode.">config.av.wss</item>
+			<item level="1" text="AC3 default" description="When enabled, AC3 will be always selected if exist.">config.av.defaultac3</item>
+			<item level="1" text="General AC3 delay (ms)" description="Configure AC3 delay (ms) value.">config.av.generalAC3delay</item>
+			<item level="1" text="General PCM delay (ms)" description="Configure PCM delay (ms) value.">config.av.generalPCMdelay</item>
+			<item level="1" text="AC3 downmix" description="When enabled, AC3 downmix will be activated." requires="CanDownmixAC3">config.av.downmix_ac3</item>
+			<item level="1" text="DTS downmix"  description="When enabled, DTS downmix will be activated." requires="CanDownmixDTS">config.av.downmix_dts</item>
+			<item level="1" text="AAC downmix"  description="When enabled, AAC downmix will be activated." requires="CanDownmixAAC">config.av.downmix_aac</item>
+			<item level="2" text="Synchronize buffer" description="When enabled, when you download the video data stream will be synchronized headers, select the value according to the best visual results (For TS over TCP/IP).">config.usage.iptv_sync</item>
+			<item level="2" text="Default size buffer" description="Configure the size of the data buffer for the IPTV video stream, select the value according to the best visual results (For TS over TCP/IP).">config.usage.iptv_buffer</item>
+			<item level="2" text="Interval read buffer" description="Configure the data buffer reading interval for the IPTV video stream, select the value according to the best visual results (For TS over TCP/IP).">config.usage.iptv_step</item>
+			
+			<item level="2" text="Use external player" requires="AppPlayer" description="When enabled, the external player is used instead of the built-in for playback of multimedia content (on base FFmpeg framework / on base GStreamer framework)." update="1">config.serviceapp.servicemp3.replace</item>
+			<item level="2" text="External player" requires="config.serviceapp.servicemp3.replace" description="Configure type the external player for playback.">config.serviceapp.servicemp3.player</item>
+			
+			<item level="2" text="FFmpeg > Software decoding AAC" requires="ExtEplayer3" description="Configure the external player for software decoding audio track AAC (For external player on base FFmpeg framework).">config.serviceapp.exteplayer3.aac_software_decode</item>
+			<item level="2" text="FFmpeg > Software decoding EAC3" requires="ExtEplayer3" description="Configure the external player for software decoding audio track EAC3 (For external player on base FFmpeg framework).">config.serviceapp.exteplayer3.eac3_software_decode</item>
+			<item level="2" text="FFmpeg > Software decoding AC3" requires="ExtEplayer3" description="Configure the external player for software decoding audio track AC3 (For external player on base FFmpeg framework).">config.serviceapp.exteplayer3.ac3_software_decode</item>
+			<item level="2" text="FFmpeg > Software decoding DTS" requires="ExtEplayer3" description="Configure the external player for software decoding audio track DTS (For external player on base FFmpeg framework).">config.serviceapp.exteplayer3.dts_software_decode</item>
+			<item level="2" text="FFmpeg > Software decoding WMA" requires="ExtEplayer3" description="Configure the external player for software decoding audio track WMA (For external player on base FFmpeg framework).">config.serviceapp.exteplayer3.wma_software_decode</item>
+			<item level="2" text="FFmpeg > Software decoding as" requires="ExtEplayer3" description="Configure the external player for software decoding audio track PCM/LPCM (For external player on base FFmpeg framework).">config.serviceapp.exteplayer3.software_decode_as</item>
+			<item level="2" text="FFmpeg > Software downmix" requires="ExtEplayer3" description="Configure the external player for software decoding audio track as stereo [downmix] (For external player on base FFmpeg framework).">config.serviceapp.exteplayer3.stereo_software_decode</item>
+		</setup>
+		<setup key="musicservices" title="Settings music players">
+			<item level="0" text="rtsp" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['rtsp']</item>
+			<item level="0" text="http" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['http']</item>
+			<item level="0" text="https" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['https']</item>
+			<item level="0" text="mpeg" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['audio/mpeg']</item>
+			<item level="0" text="wav" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['audio/x-wav']</item>
+			<item level="0" text="ogg" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['audio/ogg']</item>
+			<item level="0" text="flac" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['audio/x-flac']</item>
+			<item level="0" text="m4a" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['audio/x-m4a']</item>
+			<item level="0" text="wma" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['audio/x-wma']</item>
+		</setup>
+		<setup key="movieservices" title="Settings movie players">
+			<item level="0" text="rtsp" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['rtsp']</item>
+			<item level="0" text="http" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['http']</item>
+			<item level="0" text="https" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['https']</item>
+			<item level="0" text="mpeg" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['video/mpeg']</item>
+			<item level="0" text="mpegts" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['video/mpegts']</item>
+			<item level="0" text="mpeg2ts" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['video/mpeg2ts']</item>
+			<item level="0" text="msvideo" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['video/x-msvideo']</item>
+			<item level="0" text="mp4" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['video/mp4']</item>
+			<item level="0" text="m4v" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['video/x-m4v']</item>
+			<item level="0" text="mkv" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['video/x-mkv']</item>
+			<item level="0" text="mov" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['video/quicktime']</item>
+			<item level="0" text="flv" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['video/flv']</item>
+			<item level="0" text="wmv" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['video/x-wmv']</item>
+			<item level="0" text="asf" description="Configure the type of player for current the type of media file.">config.serviceapp.mimetypesplayer['video/x-asf']</item>
+		</setup>
+		<setup key="systemusage" title="Customize system">
+			<item weight="10" level="0" text="Setup mode" description="Configure which access level to use for the configuration menu. Expert level gives access to all items." update="1">config.usage.setup_level</item>
+			<item weight="20" level="0" text="Enable effect of fading in the menu" description="When enabled, menu's will smoothly changes its transparency.">config.misc.fadeShowMenu</item>
+			<item weight="20" level="0" text="Enable color printing from general menu" description="When enabled, the general menu will have different colored labels for different sections.">config.usage.on_color_general_menu</item>
+			<item weight="20" level="0" text="Enable color picon background from general menu" description="When enabled, the general menu will have different colored picon background for different channel.">config.usage.on_color_general_picon</item>
+			<item weight="20" level="2" text="Save disk space to store picons" description="When enabled, the picons with same names for differend services will be stored only once, without duplicate them for every channel, this mode saves space and does not require additional updates on changes in the transponder.">config.usage.picons_saving_disk_space</item>
+			<item weight="20" level="0" text="Menu animation quickly -/+ smoothly" description="Configure balance of quickly/smoothly of the animation cursor menu.">config.skin.runningStep</item>
+			
+			<item weight="20" level="0" text="OSD visibility" description="Configure the transparency of OSD." requires="CanChangeOsdAlpha">config.av.osd_alpha</item>
+			<item weight="20" level="1" text="Font default" description="Setting the default font style. This window shows an example of the selected style of the default font.">config.skin.osd_font_default</item>
+			<item weight="20" level="1" text="Font scaling" description="Configure font scaling. This window shows the selected font size for the base 20px font size.">config.skin.osd_font_scale</item>
+			
+			<item weight="60" level="2" text="Enable TV mode at startup" description="When enabled, after the box start TV mode will be active, otherwise general menu will be show.">config.usage.on_start_tvmode</item>
+			<item weight="70" level="2" text="Stop service when you exit to main menu" description="When enabled, when you exit to the general menu the current service will stop playing at the general menu background.">config.usage.stopservice_generalmenu</item>
+			<item weight="80" level="2" text="Show warning message for unhandled key" description="When enabled, a message about unhandled key will appear when you press not use buttons on remote control.">config.usage.show_unhandled_key</item>
+			<item weight="90" level="0" text="Show warning message about ending subscription" description="When enabled, show a message about ending subscription in the club ruDREAM.">config.misc.checkSubscription</item>
+			<!--
+			<item weight="130" level="2" text="Fan operation" description="Configure how the fan should operate" requires="Fan">config.usage.fan</item>
+			<item weight="130" level="2" text="Fan speed" description="Configure the speed of the fan" requires="FanPWM">config.usage.fanspeed</item>
+			<item weight="130" level="2" text="Wake On LAN" description="When enabled the set top box is able to wakeup on LAN" requires="WakeOnLAN">config.usage.wakeOnLAN</item>
+			<item weight="130" level="2" text="Enable zRam" description="Configure zRam in accordance with the specifications of your equipment, the recommended value is 50%.">config.usage.zram</item>
+			-->
+		</setup>
+		<setup key="tvusage" title="Customize TV">
+			<item level="0" text="Channel selector mode" description="Configure the channels selector display style, this mode can also be changed by the long press call button in channel selector.">config.usage.style_channel_selection</item>
+			<item level="0" text="Channel selector event-progress style" description="Set the type of the progress indication in the channel selection screen.">config.usage.show_event_progress_in_servicelist</item>
+			<item level="0" text="Channel selector to open in the next position" description="Configure the position of the cursor mode when you open the channel selector on the current or next/previous channel.">config.usage.nexchannelarrow</item>
+			<item level="1" text="Zap mode" requires="ZapMode" description="Configure the way in which the receiver changes channels.">config.misc.zapmode</item>
+			<item level="0" text="Show large window description" description="Configure the delay for show large window description event in channel selector and EPG.">config.usage.channel_selected_delay_ext</item>
+			<item level="0" text="Show blinking clock in display during recording" description="When enabled, media center display clock will flash during recording.">config.usage.blinking_display_clock_during_recording</item>
+			<item level="2" text="Show Message when Recording starts" description="When enabled, before start recording a message will appear.">config.usage.show_message_when_recording_starts</item>
+			<item level="1" text="Show positioner movement" description="Configure whether or not an icon should be shown when your motorized dish is moving.">config.usage.showdish</item>
+			<item level="0" text="Show picons update menu in channel selection" description="When enabled, picons update menu will be displayed in the channel selector context menu.">config.usage.show_update_picon_in_servicelist</item>
+			<item level="0" text="Enable preview in channel selection" description="When enabled, after pressing the OK button in the channel selector will switch the channel, and when pressed again will close the channel selector.">config.usage.preview_channel_selection</item>
+			<item level="1" text="Enable multiple bouquets" description="When enabled, services may be grouped in multiple bouquets.">config.usage.multibouquet</item>
+			<item level="1" text="Alternative numbering mode" description="When enabled, channel numbering will start at '1' for each bouquet.">config.usage.alternative_number_mode</item>
+			<item level="1" text="Enable create 'Last Scanned' bouquet" description="When enabled, the channel scan will create a bouquet of 'Last Scanned', and all found channels will be added there.">config.usage.createlastscannedbouquet</item>
+			<item level="1" text="Change bouquets in quickzap" description="When enabled, continue to the next bouquet when the last channel of the current bouquet is reached while changing channels.">config.usage.quickzap_bouquet_change</item>
+			<item level="1" text="Hide channel list in radio mode" description="When enabled, the channels selection list will be hidden while listening to a radio channel">config.usage.e1like_radio_mode</item>
+			<item level="0" text="Enable Smart Network Tuners" description="When enabled Smart Network Tuners, allow for remote streaming video receivers in the LAN if the local tuner busy.">config.usage.remote_fallback_enabled</item>
+			<item level="2" text="Alternative services tuner priority" description="Configure which tuner type will be preferred, when the same service is available on different types of tuners.">config.usage.alternatives_priority</item>
+			<item level="2" text="Preferred tuner" description="Configure which tuner will be preferred, when more than one tuner is available. If set to 'auto' the system will give priority to the tuner having the lowest number of channels/satellites.">config.usage.frontend_priority</item>
+			<item level="2" text="Preferred tuner for recordings" description="Configure which tuner for recordings will be preferred, when more than one tuner is available.">config.usage.recording_frontend_priority</item>
+			
+			<item level="2" text="Setup of CAMD profile select mode" description="Configure CAMD profile selection mode style">config.cammd.mode_menu_camd_profile</item>
+			<item level="2" text="Offline decode delay (ms)" description="Configure the offline decoding delay in milliseconds. The configured delay is observed at each control word parity change.">config.recording.offline_decode_delay</item>
+			
+			<item level="1" text="Timer events always have priority" description="When enabled, a timer is allowed to interrupt live tv, and switch to make timer job.">config.recording.asktozap</item>
+			<item level="2" text="Remove completed timers after (days)" description="Configure the number of days old timers are kept before they are automatically removed from the timer list.">config.recording.keep_timers</item>
+			<item level="0" text="Margin before record (minutes)" description="When nonzero, a recording will start earlier than the starting time indicated by the EPG.">config.recording.margin_before</item>
+			<item level="0" text="Margin after record (minutes)" description="When nonzero, a recording will stop later than the ending time indicated by the EPG.">config.recording.margin_after</item>
+			<item level="1" text="Position of finished Timers in Timerlist" description="Configure position of finished Timers in Timerlist">config.usage.timerlist_finished_timer_position</item>
+			<item level="1" text="12V output" description="When enabled, 12V output is active" requires="12V_Output">config.usage.output_12V</item>
+			<item level="2" text="Behavior of 'bouquet' in channel selector" description="Select behavior when 'bouquet' button pressed in channel selector.">config.usage.bouquet_button</item>
+			<item level="2" text="Behavior of 'pause' when paused" description="Select behavior when 'pause' button pressed.">config.seek.on_pause</item>
+			<item level="2" text="Behavior of 0 key in PiP-mode" description="Select behavior when '0' key is pressed in PIP-mode.">config.usage.pip_zero_button</item>
+			<item level="2" text="Limited character set for recording filenames" description="Limit the characters that can be used in recording filenames to (7 bit) ascii. This ensures compatibility with operating systems or file systems with limited character sets.">config.recording.ascii_filenames</item>
+			
+			<item level="1" text="Remember last used by EPG mode" description="When enabled, last used by EPG mode will be remember">config.usage.rememberlastepgtype</item>
+			<item level="1" text="Archive depth for EPG" description="Configure archive events depth for EPG. This mode is useful only for IPTV">config.epg.histday</item>
+			
+			<item level="2" text="Enable EIT EPG" description="Use EIT EPG information when it is available.">config.epg.eit</item>
+			<item level="2" text="Enable MHW EPG" description="Use MHW EPG information when it is available.">config.epg.mhw</item>
+			<item level="2" text="Enable freesat EPG" description="Use FreeSat EPG information when it is available.">config.epg.freesat</item>
+			<item level="2" text="Enable ViaSat EPG" description="Use ViaSat EPG information when it is available.">config.epg.viasat</item>
+			<item level="2" text="Enable Netmed EPG" description="Use Netmed EPG information when it is available.">config.epg.netmed</item>
+			
+			<item level="2" text="Disable background scanning" description="When enabled, the receiver will no longer monitor the tuned transponder for possible changes. Do not use this option unless you know what you are doing.">config.misc.disable_background_scan</item>
+			
+			<!--
+			<item level="2" text="Disable background scanning" description="When enabled, the receiver will no longer monitor the tuned transponder for possible changes. Do not use this option unless you know what you are doing.">config.misc.disable_background_scan</item>
+			<item level="2" text="Include EIT in http streams" description="When enabled, EIT data will be included in http streams. This allows a client receiver to show EPG.">config.streaming.stream_eit</item>
+			<item level="2" text="Include AIT in http streams" description="When enabled, AIT data will be included in http streams. This allows a client receiver to use HbbTV.">config.streaming.stream_ait</item>
+			<item level="2" text="Include ECM in http streams" description="When enabled, ECM data will be included in http streams. This allows a client receiver to do the descrambling.">config.streaming.stream_ecm</item>
+			<item level="2" text="Descramble sending http streams" description="When enabled, http streams are descrambled on the server side. The (remote) client receiver does not have to do descrambling. Default on.">config.streaming.descramble</item>
+			<item level="2" text="Descramble receiving http streams" description="When enabled, always descramble receiving http streams. This takes up more resources (descrambling demuxers), only enable if necessary. Individual streams are always descrambled if 0x100 is added to the service type, regardless of this setting. Default off.">config.streaming.descramble_client</item>
+			<item level="2" text="Require authentication for http streams" description="When enabled, authentication is required to watch http streams.">config.streaming.authentication</item>
+			-->
+			
+			<item level="2" text="Hide error message: No free tuner!" description="When enabled, 'No free tuner!' message will not be shown.">config.DSDecoding.messageNoResources</item>
+			<item level="2" text="Hide error message: Tune failed!" description="When enabled, 'Tune failed!' message will not be shown.">config.DSDecoding.messageTuneFailed</item>
+			<item level="2" text="Hide error message: No data on transponder! (Timeout reading PAT)" description="When enabled, 'No data on transponder! (Timeout reading PAT)' message will not be shown.">config.DSDecoding.messageNoPAT</item>
+			<item level="2" text="Hide error message: Service not found! (SID not found in PAT)" description="When enabled, 'Service not found! (SID not found in PAT)' message will not be shown.">config.DSDecoding.messageNoPATEntry</item>
+			<item level="2" text="Hide error message: Service invalid! (Timeout reading PMT)" description="When enabled, 'Service invalid! (Timeout reading PMT)' message will not be shown.">config.DSDecoding.messageNoPMT</item>
+		</setup>
+		<setup key="timeshiftusage" title="Timeshift">
+			<item level="1" text="Automatically start timeshift after" description="When enabled, timeshift starts automatically in background after specified time.">config.usage.timeshift_start_delay</item>
+			<item level="1" text="Show warning when timeshift is stopped" description="When enabled, a warning will be displayed and the user will get an option to stop or to continue the timeshift.">config.usage.check_timeshift</item>
+			<item level="2" text="Custom skip time for '1'/'3'-keys" description="Configure custom skip time for '1'/'3'-keys">config.seek.selfdefined_13</item>
+			<item level="2" text="Custom skip time for '4'/'6'-keys" description="Configure custom skip time for '4'/'6'-keys">config.seek.selfdefined_46</item>
+			<item level="2" text="Custom skip time for '7'/'9'-keys" description="Configure custom skip time for '7'/'9'-keys">config.seek.selfdefined_79</item>
+			<item level="2" text="Slow Motion speeds" description="Configure slow motion speed">config.seek.speeds_slowmotion</item>
+			<item level="2" text="Fast Forward speeds" description="Configure fast forward speed">config.seek.speeds_forward</item>
+			<item level="2" text="Rewind speeds" description="Configure rewind speed">config.seek.speeds_backward</item>
+<!-- TRANSLATORS: Note that "Enter" in the two strings below should *not*
+     be interpreted as "Give speed as input". The intended meaning is
+     instead "Initial speed when starting winding", i.e. the speed at
+     which "winding mode" is entered when first pressing "rewind" or
+     "fast forward". -->
+			<item level="2" text="Enter fast forward at speed" description="Configure the speed value, which will be entered at fast forward.">config.seek.enter_forward</item>
+			<item level="2" text="Enter fast rewind at speed" description="Configure the speed value, which will be entered at rewind.">config.seek.enter_backward</item>
+		</setup>
+		<setup key="movieusage" title="Customize movie">
+			<item weight="10" level="0" text="Style movie selector" description="Configure the movie selector display style. Covers or list mode is available">config.movieplayer.typemovielist</item>
+			<item weight="20" level="0" text="Show menu DVD Eject" description="When enabled, the DVD Eject menu will be displayed." requires="DVDConctroller">config.plugins.dvdcontroller.show_dvdeject</item>
+			<item weight="30" level="0" text="Show menu You are watching" description="When enabled, the You are watching menu will be displayed.">config.movieplayer.youarewatching</item>
+			<item weight="40" level="0" text="Show menu Recorded TV" description="When enabled, the Recorded TV menu will be displayed.">config.usage.show_menu_recorded_tv</item>
+			<item weight="50" level="0" text="Show menu Genres / Tags" description="When enabled, the Genres / Tags menu will be displayed.">config.movieplayer.showgenreinmenu</item>
+			<item weight="60" level="0" text="Non stop playback of episodes in serials" description="When enabled, the non stop playback of episodes in serials will be activated.">config.movieplayer.nonstopserials</item>
+			<item weight="70" level="0" text="Non stop playback of episodes in tv shows" description="When enabled, the non stop playback of episodes in shows will be activated.">config.movieplayer.nonstoptvshows</item>
+			<item weight="80" level="0" text="Non stop playback of music videos" description="When enabled, the non stop playback of music videos will be activated.">config.movieplayer.nonstopmusic</item>
+			<item weight="100" level="2" text="Behavior when a movie is started" description="Select behavior when a movie is started.">config.usage.on_movie_start</item>
+<!--			<item weight="110" level="2" text="Behavior when a movie is stopped">config.usage.on_movie_stop</item>
+			<item weight="120" level="2" text="Behavior when a movie reaches the end">config.usage.on_movie_eof</item>	-->
+			<item weight="130" level="2" text="Load Length of Movies in Movielist" description="When enabled, the lenght of each movie will be shown in the movielist.">config.usage.load_length_of_movies_in_moviellist</item>
+			<item weight="140" level="2" text="Custom skip time for '1'/'3'-keys" description="Select custom skip time for '1'/'3'-keys.">config.seek.selfdefined_13</item>
+			<item weight="150" level="2" text="Custom skip time for '4'/'6'-keys" description="Select custom skip time for '4'/'6'-keys.">config.seek.selfdefined_46</item>
+			<item weight="160" level="2" text="Custom skip time for '7'/'9'-keys" description="Select custom skip time for '7'/'9'-keys.">config.seek.selfdefined_79</item>
+			<item weight="170" level="2" text="Slow Motion speeds" description="Select slow motion speed value.">config.seek.speeds_slowmotion</item>
+			<item weight="180" level="2" text="Fast Forward speeds" description="Select fast forward speed value.">config.seek.speeds_forward</item>
+			<item weight="190" level="2" text="Rewind speeds" description="Select rewind speed value.">config.seek.speeds_backward</item>
+<!-- TRANSLATORS: The following is the speed you get on the first press on fast-forward.
+     It was previously called "enter fast forward at speed" which was easily misunderstood. -->
+			<item weight="200" level="2" text="Initial Fast Forward speed" description="Select initial fast forward speed value.">config.seek.enter_forward</item>
+			<item weight="210" level="2" text="Initial Rewind speed" description="Select initial rewind speed value.">config.seek.enter_backward</item>
+			<item weight="220" level="2" text="Composition of the recording filenames" description="Configure recording filenames composition method.">config.recording.filename_composition</item>
+		</setup>
+		<setup key="musicusage" title="Customize music">
+			<item weight="20" level="0" text="Show menu CD Eject" description="When enabled, the CD Eject menu will be displayed." requires="DVDConctroller">config.plugins.dvdcontroller.show_cdeject</item>
+			<item weight="30" level="0" text="Show menu You are listening" description="When enabled, the You are listening menu will be displayed.">config.musicplayer.youarelistening</item>
+			<item weight="40" level="0" text="Show menu Artists" description="When enabled, the Artists menu will be displayed.">config.musicplayer.showartistinmenu</item>
+			<item weight="50" level="0" text="Show track number in songs list" description="When enabled, track number in songs list will be displayed.">config.musicplayer.showtracknumber</item>
+			<item weight="60" level="0" text="Sort the list of tracks" description="When enabled, list of tracks will be sorted.">config.musicplayer.songsort</item>
+			<item weight="70" level="0" text="Repeat playlist" description="When enabled, playlist will be repeated.">config.musicplayer.repeat</item>
+			<item weight="80" level="0" text="Albums covers loading source" description="Configure the albums covers loading source.">config.musicplayer.sourcecoverart</item>
+			<item weight="90" level="0" text="Albums description loading source" description="Configure the albums description loading source.">config.musicplayer.sourcedescription</item>
+			<item weight="100" level="0" text="Song lyrics loading source" description="Configure the song lyrics loading source.">config.musicplayer.sourcelyrics</item>
+			<item weight="110" level="0" text="Use screensaver" description="When enabled, screensaver will be activated.">config.musicplayer.sreensaver.use</item>
+			<item weight="120" level="1" text="Wait before screensaver" description="Configure the time before screensaver start.">config.musicplayer.sreensaver.wait</item>
+			<item weight="130" level="1" text="Show coverart in screensaver" description="When enabled, coverart will be displayed in screensaver.">config.musicplayer.sreensaver.showcoverart</item>
+			<item weight="140" level="2" text="Speed for coverartanimation" description="Configure the speed of coverart animation.">config.musicplayer.sreensaver.coverartspeed</item>
+			<item weight="150" level="2" text="Interval for coverartanimation" description="Configure the Interval for coverart animation.">config.musicplayer.sreensaver.coverartinterval</item>
+		</setup>
+		<setup key="photousage" title="Customize photo">
+			<item weight="20" level="0" text="Slideshow Interval (sec.)" description="Configure slideshow interval value (sec.).">config.photoplayer.slidetime</item>
+			<item weight="30" level="0" text="Slide picture in loop" description="When enabled, picture will be slided in loop.">config.photoplayer.loop</item>
+			<item weight="40" level="0" text="Use a smooth transition" description="When enabled, smooth transition will be used.">config.photoplayer.smooth</item>
+			<item weight="50" level="0" text="Show Infoline" description="When enabled, infoline will be displayed.">config.photoplayer.infoline</item>
+			<item weight="60" level="0" text="Auto EXIF orientation rotation" description="When enabled, the picture is automatically rotated in the right direction according to the information obtained from EXIF.">config.photoplayer.autoOrientation</item>
+			<item weight="70" level="2" text="Scaling Mode" description="Configure scaling mode.">config.photoplayer.resize</item>
+			<item weight="80" level="2" text="Frame size in full view" description="Configure frame size value in full view.">config.photoplayer.framesize</item>
+			<item weight="90" level="2" text="Background color" description="Configure background color.">config.photoplayer.bgcolor</item>
+			<item weight="100" level="2" text="Text color" description="Configure text color.">config.photoplayer.textcolor</item>
+			<item weight="110" level="2" text="Shadow color" description="Configure shadow color.">config.photoplayer.shadowcolor</item>
+			
+		</setup>
+		<setup key="embedded" title="Embedded sources">
+			<item weight="10" level="1" text="Auto scart switching" description="Configure scart auto switching mode." requires="ScartSwitch">config.av.vcrswitch</item>
+			<item weight="20" level="2" text="Show VCR scart menu" description="When enabled, the VCR scart option will be shown on the general menu." requires="ScartSwitch">config.av.scartswitchmenu</item>
+		</setup>
+		<setup key="RFmod" title="RF output">
+			<item level="1" text="Modulator" requires="RfModulator" description="When enabled, RF output is active." >config.rfmod.enable</item>
+			<item level="2" text="Test mode" requires="RfModulator" description="When enabled, test mode is entered." >config.rfmod.test</item>
+			<item level="2" text="Sound" requires="RfModulator" description="When enabled, sound is active." >config.rfmod.sound</item>
+			<item level="2" text="Soundcarrier" requires="RfModulator" description="Configure sound carrier value.">config.rfmod.soundcarrier</item>
+			<item level="1" text="Channel" requires="RfModulator" description="Configure RF channel for use.">config.rfmod.channel</item>
+			<item level="1" text="Finetune" requires="RfModulator" description="Configure fine tune value.">config.rfmod.finetune</item>
+		</setup>
+		<setup key="lcd" title="Display setup" requires="FrontpanelDisplay">
+			<item level="0" text="Clone TV screen to LCD" description="Shows live tv or informations on LCD." requires="LcdLiveTV">config.lcd.showTv</item>
+			<item level="0" text="Brightness" description="Configure the brightness level of the front panel display.">config.lcd.bright</item>
+			<item level="0" text="Contrast" description="Configure the contrast level of the front panel display.">config.lcd.contrast</item>
+			<item level="0" text="Standby" description="Configure the brightness level of the front panel display during standby.">config.lcd.standby</item>
+			<item level="0" text="StandbyLED" description="Turn on the power LED during standby." requires="StandbyLED">config.usage.standbyLED</item>
+			
+			<item level="0" text="Scroll pages" description="Number of pages scrolled on the display." requires="BIND_scroll_pages">config.usage.bind_scroll_pages</item>
+			<item level="0" text="Scroll repeats" description="Number of repeating text on display." requires="VFD_scroll_repeats">config.usage.vfd_scroll_repeats</item>
+			<item level="2" text="Scroll delay" description="Delay in miliseconds between scrolling characters on display." requires="VFD_scroll_delay">config.usage.vfd_scroll_delay</item>
+			<item level="2" text="Initial scroll delay" description="Delay in miliseconds before start of scrolling text on display." requires="VFD_initial_scroll_delay">config.usage.vfd_initial_scroll_delay</item>
+			<item level="2" text="Final scroll delay" description="Delay in miliseconds after finish scrolling text on display." requires="VFD_final_scroll_delay">config.usage.vfd_final_scroll_delay</item>
+		</setup>
+		<setup key="opkgmanagement" title="Settings package management">
+			<item level="0" text="Check for updates" description="When enabled, it will automatically check for updates in the repository, and if any message displayed on the screen.">config.ipkg.SoftwareManager.checkForUpdates</item>
+			<item level="2" text="Allow automatic cleanup of unused languages" description="When enabled, then after installing the packages and updates, not used for localize the interface languages files will be deleted. That saves internal memory.">config.ipkg.cleanupUnusedLanguages</item>
+			<item level="2" text="Allow backup and restore of packages" description="When enabled, the backup and recovery will be saved and restored additionally installed packages.">config.ipkg.allowBackupRestorePackages</item>
+			<item level="2" text="Allow use safe mode to upgrade/install with cache" description="When enabled, will use the cache on local folder to download all of the packages, and then perform the upgrade/install.">config.ipkg.safe_mode</item>
+			<item level="2" text="Allow update to beta/alfa versions software" description="Configure the software will be updated to the beta/alfa version.">config.ipkg.allowVersionUpdate</item>
+			<item level="2" text="Allow overwrite preexisting config files" description="When enabled, allow overwrite preexisting config files. When disable, new config files are renamed with the addition of the end '-opkg'.">config.ipkg.force_maintainer</item>
+			<item level="2" text="Allow to upgrade despite failed dependencies" description="When enabled, upgrade despite failed dependencies.">config.ipkg.force_depends_upgrade</item>
+			<item level="2" text="Allow to install/remove despite failed dependencies" description="When enabled, install/remove despite failed dependencies.">config.ipkg.force_depends</item>
+			<item level="2" text="Allow to overwrite files from another package during an install" description="When enabled, files installed from other packages can be overwritten.">config.ipkg.force_overwrite</item>
+			<item level="2" text="Allow to reinstall a package" description="When enabled, installed packages can be reinstalled.">config.ipkg.force_reinstall</item>
+			<item level="2" text="Allow to remove package even if prerm script fails" description="When enabled, packages will be removed even if prerm script fails.">config.ipkg.force_remove</item>
+			<item level="2" text="Allow to remove package and all that depend on it" description="When enabled, packages will be removed with all depend on it too.">config.ipkg.force_recursive</item>
+		</setup>
+		<setup key="wol" title="Wake-On-Lan" requires="WOL">
+			<item text="Wake-On-Lan enable" description="When enabled, in menu power control show mode standby with WOL.">config.plugins.wolconfig.activate</item>
+			<item text="Activation mode" description="Configure which menu to display the command held in standby with WOL.">config.plugins.wolconfig.location</item>
+		</setup>
+		<setup key="hdmicec" title="HDMI Consumer Electronics Control" requires="HDMICec">
+			<item text="Enabled">config.hdmicec.enabled</item>
+			<item text="Put TV in standby">config.hdmicec.control_tv_standby</item>
+			<item text="Wakeup TV from standby">config.hdmicec.control_tv_wakeup</item>
+			<item text="Regard deep standby as standby">config.hdmicec.handle_deepstandby_events</item>
+			<item text="Switch TV to correct input">config.hdmicec.report_active_source</item>
+			<item text="Use TV remote control">config.hdmicec.report_active_menu</item>
+			<item text="Handle standby from TV">config.hdmicec.handle_tv_standby</item>
+			<item text="Handle wakeup from TV">config.hdmicec.handle_tv_wakeup</item>
+			<item text="Wakeup signal from TV">config.hdmicec.tv_wakeup_detection</item>
+			<item text="Forward volume keys">config.hdmicec.volume_forwarding</item>
+			<item text="Put receiver in standby">config.hdmicec.control_receiver_standby</item>
+			<item text="Wakeup receiver from standby">config.hdmicec.control_receiver_wakeup</item>
+			<item text="Minimum send interval">config.hdmicec.minimum_send_interval</item>
+			<item text="EDID checking" description="When enabled, Extended Display Identification Data for HDMI checking will be activated." requires="CanBypassEdidChecking">config.av.bypass_edid_checking</item>
+		</setup>
+</setupxml>

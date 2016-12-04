@@ -1,0 +1,106 @@
+<skin>
+	<!-- VU+SOLO2 (LCD 1-row display 132x1) -->
+	<!-- LCD screen (infobar) -->
+	<screen name="InfoBarSummary" position="0,0" size="132,1" id="1">
+		<widget source="session.CurrentService" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+	<!-- LCD screen (channelselection) -->
+	<screen name="ChannelSelection_summary" position="0,0" size="132,1" id="1">
+		<widget source="parent.ServiceEvent" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+	<!-- LCD screen (channelselection extended) -->
+	<screen name="ChannelSelectionMulti_summary" position="0,0" size="132,1" id="1">
+		<widget source="parent.ServiceEvent" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+	<!-- LCD screen (SongSelector) -->
+	<screen name="SongSelectorSummary" position="0,0" size="132,1" id="1">
+		<widget source="parent.idtrack" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1">
+			<convert type="MediaDate">Title,Music</convert>
+		</widget>
+	</screen>
+	<!-- LCD screen (MoviSelector) -->
+	<screen name="MovieSelectorSummary" position="0,0" size="132,1" id="1">
+		<widget source="parent.idtrack" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1">
+			<convert type="MediaDate">Title,Movie</convert>
+		</widget>
+	</screen>
+	<!-- LCD screen (PhotoSelector) -->
+	<screen name="PhotoSelectorSummary" position="0,0" size="132,1" id="1">
+		<widget source="parent.idtrack" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1">
+			<convert type="MediaDate">Title,Photo</convert>
+		</widget>
+	</screen>
+	<!-- LCD screen (movieplayer) -->
+	<screen name="InfoBarMoviePlayerSummary" position="0,0" size="132,1" id="1">
+		<widget source="session.CurrentService" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+	<!-- LCD screen (ChoiceBox) -->
+	<screen name="ChoiceBox_summary" position="0,0" size="132,1" id="1">
+		<widget source="parent.summary_list" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1"/>
+	</screen>
+	<!-- LCD screen (MessageBox) -->
+	<screen name="MessageBox_summary" position="0,0" size="132,1" id="1">
+		<widget source="parent.selectedChoice" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1"/>
+	</screen>
+	<!-- LCD screen (menus) -->
+	<screen name="MenuSummary" position="0,0" size="132,1" id="1">
+		<widget source="parent.menu" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1">
+			<convert type="StringListSelection" />
+		</widget>
+	</screen>
+	<!-- LCD screen (setup) -->
+	<screen name="SetupSummary" position="0,0" size="132,1" id="1">
+		<widget source="SetupTitle" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1"/>
+	</screen>
+	<!-- LCD screen (misc) -->
+	<screen name="SimpleSummary" position="0,0" size="132,1" id="1">
+		<widget source="parent.Title" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1"/>
+	</screen>
+	<!-- LCD screen (standby) -->
+	<screen name="StandbySummary" position="0,0" size="132,1" id="1">
+		<widget source="global.CurrentTime" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+	</screen>
+	<!-- LCD video wizard -->
+	<screen name="VideoWizardSummary" position="0,0" size="132,1" id="1">
+		<widget source="parent.list" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1">
+			<convert type="StringListSelection" />
+		</widget>
+	</screen>
+	<!-- LCD wizard -->
+	<screen name="WizardSummary" position="0,0" size="132,1" id="1">
+		<widget source="parent.list" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1">
+			<convert type="StringListSelection" />
+		</widget>
+	</screen>
+	<!-- LCD job view -->
+	<screen name="JobView_summary" position="0,0" size="132,1" id="1">
+		<widget source="parent.summary_job_name" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1"/>
+	</screen>
+	<!-- LCD DVD -->
+	<screen name="DVDSummary" position="0,0" size="132,1" id="1">
+		<widget source="session.CurrentService" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+	<!-- LCD General Menu -->
+	<screen name="GeneralMenuSummary" position="0,0" size="132,1" id="1">
+		<widget source="mMenu" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1"/>
+	</screen>
+	<!-- LCD Music player -->
+	<screen name="MusicPlayerSummary" position="0,0" size="132,1" id="1">
+		<widget source="parent.idtrack" render="RollerLabel" steptime="250" startdelay="2500"  position="0,0" size="80,1" halign="left" noWrap="1">
+			<convert type="MediaDate">Title,Music</convert>
+		</widget>
+	</screen>
+	<!-- End Summary -->
+</skin>

@@ -1,0 +1,384 @@
+<menu text="Mainmenu" title="Main menu">
+	<id val="id_mainmenu" />
+<!-- the following types are allowed:
+	<screen [module="mod"] [screen="classname"]>[arguments]</screen> 
+		executes Screen called "classname" from module "Screen.mod"
+		if no module is given, Screen must be globally available.
+		if no screen is given, module is used as screen class name.
+		arguments must be comma seperated (will be fed to eval), and can
+			use stuff from module
+		(of course you must specify at least one of module, screen.)
+	<setup id="id" />
+		opens a setup with specified id
+	<code> .. code .. </code>
+		"exec"s code
+-->
+	<menu level="0" text="TV" entryID="mainmenu_tv" weight="10">
+		<id val="id_mainmenu_tv" default="&gt;&lt;"/>
+		<item level="0" text="Recorded TV" entryID="mainmenu_tv_recorded" weight="10" endtext="•••>"><screen module="InfoBar" screen="StartMoviePlayer" /></item>
+		<item level="0" text="Scheduler" entryID="mainmenu_tv_timer" weight="20" endtext="•••>"><screen module="TimerEdit" screen="TimerEditList" /></item>
+		<item level="0" text="Live TV" entryID="mainmenu_tv_live" weight="30" endtext="&gt;&lt;">
+			<code>
+from Screens.InfoBar import InfoBar
+from Screens.ChannelSelection import ChannelSelection
+self.hide()
+if InfoBar.instance.servicelist is None:
+	InfoBar.instance.servicelist = InfoBar.instance.session.instantiateDialog(ChannelSelection)
+InfoBar.instance.servicelist.setModeTv()
+InfoBar.instance.servicelist.zap()
+self.close(1)
+			</code>
+		</item>
+		<item level="0" text="Channel Selection" entryID="mainmenu_tv_channel" weight="40">
+			<code>
+from Screens.InfoBar import InfoBar
+from Screens.ChannelSelection import ChannelSelection
+self.hide()
+if InfoBar.instance.servicelist is None:
+	InfoBar.instance.servicelist = InfoBar.instance.session.instantiateDialog(ChannelSelection)
+InfoBar.instance.showTv()
+self.close(1)
+			</code>
+		</item>
+	</menu>
+	<menu level="0" text="Movies" entryID="mainmenu_movies" weight="20">
+		<id val="id_mainmenu_movies" default="&gt;" overrides="0" update="1"/>
+		<item level="0" text="Recorded TV" entryID="mainmenu_movies_recorded" weight="30" endtext="•••>" requires="config.usage.show_menu_recorded_tv">
+			<screen module="InfoBar" screen="StartMoviePlayer" />
+		</item>
+		<item level="0" text="All movies" entryID="mainmenu_movies_movies" weight="40" endtext=">">
+			<code>
+from Plugins.Extensions.MoviePlayer.plugin import MovieSelector
+from Components.MediaLibrary import mediaLibrarys
+def menuClosed(*res):
+	from Components.MediaLibrary import mediaLibrarys
+	from Components.config import config
+	from os import system as os_system
+	mediaLibrarys.current = mediaLibrarys.default
+	if res and res[0]:
+		if len(res) == 1:
+			self.close(True)
+			return
+		if len(res) == 2:
+			if res[1] is None:
+				self.close()
+				return
+	if config.usage.stopservice_generalmenu.value:
+		self.session.nav.stopService()
+		os_system("/usr/bin/showiframe /boot/black.mvi")
+playtracklist = mediaLibrarys.playtracklist
+playtype = mediaLibrarys.playtype
+if playtype != "Movie":
+	playtracklist = []
+self.session.openWithCallback(menuClosed, MovieSelector, playtracklist)
+			</code>
+		</item>
+		<menu level="0" text="TV Serials" entryID="mainmenu_movies_tvserials" weight="70" endtext=">">
+			<id val="id_mainmenu_movies_tvserials" default=">" overrides="0" update="1" findmenu="1"/>
+		</menu>
+		<menu level="0" text="TV Shows" entryID="mainmenu_movies_tvshows" weight="80" endtext=">">
+			<id val="id_mainmenu_movies_tvshows" default=">" overrides="0" update="1" findmenu="1"/>
+		</menu>
+		<menu level="0" text="Bouquets" entryID="mainmenu_movies_bouquets" weight="90" endtext=">">
+			<id val="id_mainmenu_movies_bouquets" default=">" overrides="0" update="1" findmenu="1"/>
+			<menu level="0" text="Actors / Artists" entryID="mainmenu_movies_artists" weight="70" endtext=">">
+				<id val="id_mainmenu_movies_artists" default=">" overrides="0" update="1" findmenu="1"/>
+			</menu>
+			<menu level="0" text="Genres / Tags" entryID="mainmenu_movies_genres" weight="80" endtext=">">
+				<id val="id_mainmenu_movies_genres" default=">" overrides="0" update="1" findmenu="1"/>
+			</menu>
+			<menu level="0" text="Directed / Composers" entryID="mainmenu_movies_composers" weight="90" endtext=">">
+				<id val="id_mainmenu_movies_composers" default=">" overrides="0" update="1" findmenu="1"/>
+			</menu>
+		</menu>
+		<menu level="0" text="Genres / Tags" entryID="mainmenu_movies_genres" requires="config.movieplayer.showgenreinmenu" weight="100" endtext=">">
+				<id val="id_mainmenu_movies_genres" default=">" overrides="0" update="1" findmenu="1"/>
+		</menu>
+		<item level="0" text="Search" entryID="mainmenu_movies_search" weight="110" endtext=">">
+			<code>
+from Plugins.Extensions.MoviePlayer.plugin import MovieSelector
+def menuClosed(*res):
+	from Components.MediaLibrary import mediaLibrarys
+	from Components.config import config
+	from os import system as os_system
+	mediaLibrarys.current = mediaLibrarys.default
+	if res and res[0]:
+		if len(res) == 1:
+			self.close(True)
+			return
+		if len(res) == 2:
+			if res[1] is None:
+				self.close()
+				return
+	if config.usage.stopservice_generalmenu.value:
+		self.session.nav.stopService()
+		os_system("/usr/bin/showiframe /boot/black.mvi")
+movieselector = self.session.openWithCallback(menuClosed, MovieSelector)
+movieselector.showSearch()
+			</code>
+		</item>
+	</menu>
+	<menu level="0" text="Music" entryID="mainmenu_music" weight="30">
+		<id val="id_mainmenu_music" default="&gt;" overrides="0" update="1"/>
+		<menu level="0" text="Video" entryID="mainmenu_movies_music" weight="25" endtext="•••>">
+			<id val="id_mainmenu_movies_music" default="&gt;&lt;" overrides="0" update="1" findmenu="1"/>
+			<menu level="0" text="Playlists" entryID="mainmenu_movies_playlists" weight="30" endtext=">">
+				<id val="id_mainmenu_movies_playlists" default=">" overrides="0" update="1" findmenu="1"/>
+			</menu>
+		</menu>
+		<item level="0" text="All songs" entryID="mainmenu_music_songs" weight="40" endtext=">">
+			<code>
+from Plugins.Extensions.MusicPlayer.plugin import musicPlayer, MusicPlayer
+from Components.MediaLibrary import mediaLibrarys
+from enigma import eServiceReference, iServiceInformation
+def menuClosed(*res):
+	from Components.MediaLibrary import mediaLibrarys
+	from Components.config import config
+	from os import system as os_system
+	mediaLibrarys.current = mediaLibrarys.default
+	if res and res[0]:
+		if len(res) == 1:
+			self.close(True)
+			return
+		if len(res) == 2:
+			if res[1] is None:
+				self.close()
+				return
+	if config.usage.stopservice_generalmenu.value:
+		self.session.nav.stopService()
+		os_system("/usr/bin/showiframe /boot/black.mvi")
+service = self.session.nav.getCurrentService()
+servicestate = service and int(service.info().getInfo(iServiceInformation.sState)) or 0
+servicerefer = service and service.info().getInfoString(iServiceInformation.sServiceref)
+if servicestate == 1:
+	playtrack = mediaLibrarys.playtrack
+	playtracklist = mediaLibrarys.playtracklist
+	playtype = mediaLibrarys.playtype
+	PlaytrackID = playtrack[0]
+	if playtype == "Music":
+		musicPlayer = self.session.openWithCallback(menuClosed, MusicPlayer)
+		musicPlayer.playlist.clear()
+		indexplay = 0
+		counttrack = 0
+		for track in playtracklist:
+			TrackID = track[0]
+			ref = eServiceReference(4097, 0, track[5])
+			musicPlayer.playlist.addFile(ref, TrackID)
+			if PlaytrackID == TrackID:
+				indexplay = counttrack
+			counttrack += 1
+		if counttrack > 0:
+			musicPlayer.changeEntry(indexplay)
+			musicPlayer.openSongSelector(False)
+		else:
+			musicPlayer.openSongSelector(True)
+	else:
+		musicPlayer = self.session.openWithCallback(menuClosed, MusicPlayer)
+		musicPlayer.openSongSelector(True)
+else:
+	musicPlayer = self.session.openWithCallback(menuClosed, MusicPlayer)
+	musicPlayer.openSongSelector(True)
+			</code>
+		</item>
+		<menu level="0" text="Playlists" entryID="mainmenu_music_playlists" weight="50" endtext=">">
+			<id val="id_mainmenu_music_playlists" default="&gt;&lt;" overrides="0" update="1" findmenu="1"/>
+		</menu>
+		<menu level="0" text="Bouquets" entryID="mainmenu_music_bouquets" weight="60" endtext=">">
+			<id val="id_mainmenu_music_bouquets" default=">" overrides="0" update="0" findmenu="1"/>
+			<menu level="0" text="Artists" entryID="mainmenu_music_artists" weight="70" endtext=">">
+				<id val="id_mainmenu_music_artists" default=">" overrides="0" update="1" findmenu="1"/>
+			</menu>
+			<menu level="0" text="Albums" entryID="mainmenu_music_albums" weight="80" endtext=">">
+				<id val="id_mainmenu_music_albums" default=">" overrides="0" update="1" findmenu="1"/>
+			</menu>
+			<menu level="0" text="Genres" entryID="mainmenu_music_genres" weight="90" endtext=">">
+				<id val="id_mainmenu_music_genres" default=">" overrides="0" update="1" findmenu="1"/>
+			</menu>
+			<menu level="0" text="Composers" entryID="mainmenu_music_composers" weight="100" endtext=">">
+				<id val="id_mainmenu_music_composers" default=">" overrides="0" update="1" findmenu="1"/>
+			</menu>
+		</menu>
+		<menu level="0" text="Artists" entryID="mainmenu_music_artists" requires="config.musicplayer.showartistinmenu" weight="70" endtext=">">
+			<id val="id_mainmenu_music_artists" default=">" overrides="0" update="1" findmenu="1"/>
+		</menu>
+		<item level="0" text="Search" entryID="mainmenu_music_search" weight="80" endtext=">">
+			<code>
+from Plugins.Extensions.MusicPlayer.plugin import musicPlayer, MusicPlayer
+def menuClosed(*res):
+	from Components.MediaLibrary import mediaLibrarys
+	from Components.config import config
+	from os import system as os_system
+	mediaLibrarys.current = mediaLibrarys.default
+	if res and res[0]:
+		if len(res) == 1:
+			self.close(True)
+			return
+		if len(res) == 2:
+			if res[1] is None:
+				self.close()
+				return
+	if config.usage.stopservice_generalmenu.value:
+		self.session.nav.stopService()
+		os_system("/usr/bin/showiframe /boot/black.mvi")
+musicPlayer = self.session.openWithCallback(menuClosed, MusicPlayer)
+musicPlayer.openSongSelector(True)
+musicPlayer.songselector.showSearch()
+			</code>
+		</item>
+	</menu>
+	<menu level="0" text="Photos" entryID="mainmenu_photos" weight="40">
+		<id val="id_mainmenu_photos" default="&gt;"/>
+		<menu level="0" text="Slideshow" entryID="mainmenu_photos_playlists" weight="30" endtext="•••>">
+			<id val="id_mainmenu_photos_playlists" default=">" update="1" overrides="0" findmenu="1"/>
+		</menu>
+		<item level="0" text="All photos" entryID="mainmenu_photos_photos" weight="40" endtext=">">
+			<code>
+from Plugins.Extensions.PhotoPlayer.plugin import PhotoSelector
+from Components.MediaLibrary import mediaLibrarys
+def menuClosed(*res):
+	from Components.MediaLibrary import mediaLibrarys
+	from Components.config import config
+	from os import system as os_system
+	mediaLibrarys.current = mediaLibrarys.default
+	if res and res[0]:
+		if len(res) == 1:
+			self.close(True)
+			return
+		if len(res) == 2:
+			if res[1] is None:
+				self.close()
+				return
+	if config.usage.stopservice_generalmenu.value:
+		self.session.nav.stopService()
+		os_system("/usr/bin/showiframe /boot/black.mvi")
+playtracklist = mediaLibrarys.playtracklist
+playtype = mediaLibrarys.playtype
+if playtype != "Photo":
+	playtracklist = []
+self.session.openWithCallback(menuClosed, PhotoSelector, playtracklist)
+			</code>
+		</item>
+		<menu level="0" text="Albums" entryID="mainmenu_photos_albums" weight="50" endtext=">">
+			<id val="id_mainmenu_photos_albums" default=">" update="1" overrides="0" findmenu="1"/>
+		</menu>
+		<menu level="0" text="Bouquets" entryID="mainmenu_photos_bouquets" weight="60" endtext=">">
+			<id val="id_mainmenu_photos_bouquets" default=">" update="0" overrides="0" findmenu="1"/>
+			<menu level="0" text="Persons" entryID="mainmenu_photos_artists" weight="70" endtext=">">
+				<id val="id_mainmenu_photos_artists" default=">" overrides="0" update="1" findmenu="1"/>
+			</menu>
+			<menu level="0" text="Albums" entryID="mainmenu_photos_albums" weight="80" endtext=">">
+				<id val="id_mainmenu_photos_albums" default=">" overrides="0" update="1" findmenu="1"/>
+			</menu>
+			<menu level="0" text="Genres" entryID="mainmenu_photos_genres" weight="90" endtext=">">
+				<id val="id_mainmenu_photos_genres" default=">" update="1" overrides="0" findmenu="1"/>
+			</menu>
+		</menu>
+		<item level="0" text="Search" entryID="mainmenu_photos_search" weight="100" endtext=">">
+			<code>
+from Plugins.Extensions.PhotoPlayer.plugin import PhotoSelector
+def menuClosed(*res):
+	from Components.MediaLibrary import mediaLibrarys
+	from Components.config import config
+	from os import system as os_system
+	mediaLibrarys.current = mediaLibrarys.default
+	if res and res[0]:
+		if len(res) == 1:
+			self.close(True)
+			return
+		if len(res) == 2:
+			if res[1] is None:
+				self.close()
+				return
+	if config.usage.stopservice_generalmenu.value:
+		self.session.nav.stopService()
+		os_system("/usr/bin/showiframe /boot/black.mvi")
+photoselector = self.session.openWithCallback(menuClosed, PhotoSelector)
+photoselector.showSearch()
+			</code>
+		</item>
+	</menu>
+	<item level="0" text="Plugins" entryID="mainmenu_plugins" weight="50"><screen module="PluginBrowser" screen="PluginBrowser" /></item>
+	<menu weight="10" level="0" text="Setup" flushConfigOnClose="1" entryID="mainmenu_setup" endtext="•••>">
+		<id val="id_mainmenu_setup" default="&gt;&lt;"/>
+		<menu weight="40" level="0" text="System" entryID="mainmenu_setup_system" endtext="&gt;&lt;">
+			<id val="id_mainmenu_setup_system" default="&gt;&lt;"/>
+			<item weight="1" level="0" text="Parental control" entryID="mainmenu_setup_parental" endtext="•••>"><screen module="ParentalControlSetup" screen="ParentalControlSetup" /></item>
+			<item weight="2" level="0" text="Factory reset" entryID="mainmenu_setup_factoryreset" endtext="•••>"><screen module="FactoryReset" screen="FactoryReset" /></item>
+			<item weight="5" level="0" entryID="mainmenu_setup_system_usage" endtext="&gt;&lt;"><setup id="systemusage" /></item>
+			
+			<item weight="10" level="0" entryID="mainmenu_setup_system_av"><setup id="avsetup"/></item>
+			
+			<item weight="20" level="0" text="Language" entryID="mainmenu_setup_system_language"><screen module="LanguageSelection" /></item>
+			<item weight="30" level="0" entryID="mainmenu_setup_system_timezone"><setup id="timezone"/></item>
+			
+			<item weight="40" level="1" entryID="mainmenu_setup_system_rfmod" requires="RfModulator"><setup id="RFmod"/></item>
+				
+			<item weight="50" level="0" text="Network" entryID="mainmenu_setup_system_network"><screen module="NetworkSetup" screen="NetworkAdapterSelection" /></item>
+			<item weight="60" level="0" text="Storage devices" entryID="mainmenu_setup_system_storage"><screen module="StorageDeviceSetup" screen="StorageDeviceSelection"/></item>
+			<item weight="70" level="2" text="Input devices" entryID="mainmenu_setup_input_device_setup"><screen module="InputDeviceSetup" screen="InputDeviceSelection" /></item>
+			<item weight="80" level="1" text="Embedded sources" entryID="mainmenu_setup_embedded" requires="ScartSwitch"><setup id="embedded" /></item>
+			<item weight="90" level="0" requires="HDMICec" text="HDMI Consumer Electronics Control" entryID="mainmenu_setup_system_hdmicec"><screen module="HdmiCECSetup" screen="HdmiCECSetupScreen"/></item>
+			<item weight="100" level="1" requires="FrontpanelDisplay" text="Internal Display" entryID="mainmenu_setup_system_lcd"><setup id="lcd" /></item>
+		</menu>
+		<menu weight="50" level="0" text="TV" entryID="mainmenu_setup_tv">
+			<id val="id_mainmenu_setup_tv" default="&gt;&lt;"/>
+			<item weight="10" level="0" entryID="mainmenu_setup_tv_usage" endtext="&gt;&lt;"><setup id="tvusage" /></item>
+			<item weight="20" level="1" text="Infobar" entryID="mainmenu_setup_tv_infobar"><setup id="tvinfobar" /></item>
+			<menu weight="30" level="0" text="Services" entryID="mainmenu_setup_tv_scan">
+				<id val="id_mainmenu_setup_tv_scan" />
+				<item weight="10" text="Tuner configuration" entryID="id_mainmenu_setup_tv_scan_tuner"><screen module="Satconfig" screen="NimSelection" /></item>
+				<item weight="20" text="Automatic scan" entryID="id_mainmenu_setup_tv_scan_auto"><screen module="ScanSetup" screen="ScanSimple" /></item>
+				<item weight="30" text="Manual scan" entryID="id_mainmenu_setup_tv_ext_scan_manual"><screen module="ScanSetup" screen="ExtScanSetup" /></item>
+			</menu>
+			<item weight="40" level="2" entryID="mainmenu_setup_tv_timeshiftusage"><setup id="timeshiftusage" /></item>
+			<item weight="50" level="2" entryID="subtitle_setup"><setup id="subtitlesetup" /></item>
+			<item weight="60" level="1" entryID="autolanguage_setup"><setup id="autolanguagesetup" /></item>
+			<menu weight="70" level="1" text="Common Interface" entryID="mainmenu_setup_tv_ci" requires="CommonInterface">
+				<id val="id_mainmenu_setup_tv_ci" default=">"/>
+				<item weight="10" level="1" text="Common Interface selection" entryID="mainmenu_setup_tv_ci_selection" requires="CommonInterface" endtext="•••>"><screen module="Ci" screen="CiSelection" /></item>
+			</menu>
+		</menu>
+		<menu weight="51" level="0" text="Movies" entryID="mainmenu_setup_movie">
+			<id val="id_mainmenu_setup_movie" default="&gt;&lt;"/>
+			<item weight="10" level="0" entryID="mainmenu_setup_movie_usage" endtext="&gt;&lt;"><setup id="movieusage" /></item>
+			<item weight="11" level="2" text="Used players" entryID="mainmenu_setup_movie_service" requires="AppPlayer"><setup id="movieservices" /></item>
+			<item weight="30" level="1" text="Infobar" entryID="mainmenu_setup_movie_infobar"><setup id="movieinfobar" /></item>
+		</menu>
+		<menu weight="52" level="0" text="Music" entryID="mainmenu_setup_music">
+			<id val="id_mainmenu_setup_music" default="&gt;&lt;"/>
+			<item weight="10" level="0" entryID="mainmenu_setup_music_usage" endtext="&gt;&lt;"><setup id="musicusage" /></item>
+			<item weight="11" level="2" text="Used players" entryID="mainmenu_setup_music_service" requires="AppPlayer"><setup id="musicservices" /></item>
+		</menu>
+		<menu weight="53" level="0" text="Photos" entryID="mainmenu_setup_photo">
+			<id val="id_mainmenu_setup_photo" default="&gt;&lt;"/>
+			<item weight="10" level="0" entryID="mainmenu_setup_photo_usage" endtext="&gt;&lt;"><setup id="photousage" /></item>
+		</menu>
+		<menu weight="54" level="0" text="Library" entryID="mainmenu_setup_medialibrary">
+			<id val="id_mainmenu_setup_medialibrary" default="&gt;&lt;"/>
+			<item weight="10" level="0" text="Rebuild library" entryID="mainmenu_setup_medialibrary_rebuild" endtext="•••>">
+				<screen module="MediaLibraryRebuild" screen="MediaLibraryRebuild" />
+			</item>
+			<item weight="20" level="0" entryID="mainmenu_setup_medialibrary_setup" endtext="&gt;&lt;"><setup id="medialibrary"/></item>
+		</menu>
+		<menu weight="55" level="0" text="Plugins" entryID="mainmenu_setup_plugin">
+			<id val="id_mainmenu_setup_plugin" default=">"/>
+			<item weight="10" level="1" text="Extensions and plugins manager" entryID="mainmenu_setup_softwaremanager" endtext="•••>"><screen module="Plugins.SystemPlugins.SoftwareManager.plugin" screen="PluginManager"/></item>
+		</menu>
+	</menu>
+	<menu level="0" text="Tasks" entryID="mainmenu_tasks" weight="60">
+		<id val="id_mainmenu_tasks" default="&gt;&lt;"/>
+		<menu weight="20" level="0" entryID="mainmenu_tasks_power" text="Power" endtext="&gt;&lt;">
+			<id val="id_mainmenu_tasks_power" default=">"/>
+			<item level="0" text="Sleep Timer" entryID="mainmenu_tasks_power_sleeptimer" endtext="•••>"><screen module="SleepTimerEdit" screen="SleepTimerEdit" /></item>
+			<item level="0" text="Standby" entryID="mainmenu_tasks_power_standby"><screen module="Standby" screen="Standby"/></item>
+			<item level="0" text="Shutdown" entryID="mainmenu_tasks_power_shutdown"><screen module="Standby" screen="TryQuitMainloop">1</screen></item>
+			<item level="0" text="Deep standby" requires="DeepstandbySupport" entryID="mainmenu_tasks_power_shutdown"><screen module="Standby" screen="TryQuitMainloop">1</screen></item>
+			<item level="0" text="Reboot" entryID="mainmenu_tasks_power_reboot"><screen module="Standby" screen="TryQuitMainloop">2</screen></item>
+			<item level="2" text="Restart shell" entryID="mainmenu_tasks_power_restartshell"><screen module="Standby" screen="TryQuitMainloop">3</screen></item>
+		</menu>
+		<menu weight="30" level="0" text="Information" entryID="mainmenu_tasks_info">
+			<id val="id_mainmenu_tasks_info" />
+			<item level="0" text="About device" entryID="mainmenu_tasks_info_about"><screen module="About" /></item>
+		</menu>
+	</menu>
+</menu>

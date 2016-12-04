@@ -1,0 +1,1449 @@
+<skin>
+	<!-- ### ruDREAM Live X Skin (skin.xml) ### -->
+	
+	<!-- ####### Head Resolution ####### -->
+	<output id="0">
+		<resolution xres="1280" yres="720" bpp="32" />
+	</output>
+	<!-- Picons -->
+	<picons type="service">
+		<picon id="service_330x180" folder="service_330x180" size="330,180" mirror="60" offset="5" transparent="0" pixmap="skin_default/frame/frame_330x180.png"/>
+		<picon id="service_329x180" folder="service_329x180" size="330,180" mirror="0" offset="0" transparent="0" />
+		<picon id="service_260x142" folder="service_260x142" size="260,142" mirror="0" offset="0" transparent="0" />
+		<picon id="service_240x131" folder="service_240x131" size="240,131" mirror="0" offset="0" transparent="0" />
+		
+		<picon id="service_150x150" folder="service_150x150" size="150,150" mirror="56" offset="5" transparent="0" pixmap="skin_default/frame/frame_150x150.png"/>
+		<picon id="service_125x82" folder="service_125x82" size="125,82" mirror="0" offset="0" transparent="0" pixmap="skin_default/frame/frame_125x82.png"/>
+		<picon id="service_80x43" folder="service_80x43" size="80,43" mirror="0" offset="0" transparent="1" />
+	</picons>
+	<picons type="provider">
+		<picon id="provider_125x82" folder="provider_125x82" size="125,82" mirror="0" offset="0" />
+	</picons>
+	<picons type="satellite">
+		<picon id="satellite_125x82" folder="satellite_125x82" size="125,82" mirror="0" offset="0" />
+	</picons>
+	<!-- Colors (#AARRGGBB) -->
+	<colors>
+		<color name="white" value="#ffffff" />
+		<color name="grey" value="#cccccc" />
+		<color name="darkgrey" value="#999999" />
+		<color name="black" value="#00000000" />
+		<color name="dark" value="#50000000" />
+		<color name="red" value="#f01010" />
+		<color name="green" value="#389416" />
+		<color name="blue" value="#0064c7" />
+		<color name="yellow" value="#bab329" />
+		<color name="lightred" value="#f54d32" />
+		<color name="lightgreen" value="#6bc749" />
+		<color name="lightblue" value="#3397fa" />
+		<color name="lightyellow" value="#ede65c" />
+		<color name="transparent" value="#ffffffff" />
+		<color name="transpWhite" value="#77ffffff" />
+		<color name="transpBlack" value="#80000000" />
+		<color name="background" value="#33000000" />
+		<color name="foreground" value="#dddddd" />
+		<color name="bg" value="#33000000" />
+		<color name="h2" value="#cccccc" />
+	</colors>
+	<!-- Main screen colors (id=0 for Menu's, id=1 for LCD) -->
+	<windowstyle type="skinned" id="0">
+		<title offset="30,20" font="Regular;24" />
+
+		<color name="Background" color="#33000000" />
+		<color name="LabelForeground" color="#dddddd" />
+
+		<color name="ListboxBackground" color="#33000000" />
+		<color name="ListboxForeground" color="#dddddd" />
+
+		<color name="ListboxSelectedBackground" color="#33000000" />
+		<color name="ListboxSelectedForeground" color="#ffffff" />
+
+		<color name="ListboxMarkedBackground" color="#33000000" />
+		<color name="ListboxMarkedForeground" color="#f23d21" />
+
+		<color name="ListboxMarkedAndSelectedBackground" color="#33000000" />
+		<color name="ListboxMarkedAndSelectedForeground" color="#f23d21" />
+
+		<color name="WindowTitleBackground" color="#33000000" />
+		<color name="WindowTitleForeground" color="#ffffff" />
+
+		<!-- Main screen border png's -->
+		<!-- Window with Title, margin="top,bottom,left,right" -->
+		<borderset name="bsWindow" margin="52,12,12,12">
+			<pixmap pos="bpTopLeft"     filename="skin_default/general/b_tl.png" />
+			<pixmap pos="bpTop"         filename="skin_default/general/b_t.png"  />
+			<pixmap pos="bpTopRight"    filename="skin_default/general/b_tr.png" />
+			<pixmap pos="bpLeft"        filename="skin_default/general/b_l.png"  />
+			<pixmap pos="bpRight"       filename="skin_default/general/b_r.png"  />
+			<pixmap pos="bpBottomLeft"  filename="skin_default/general/b_bl.png" />
+			<pixmap pos="bpBottom"      filename="skin_default/general/b_b.png"  />
+			<pixmap pos="bpBottomRight" filename="skin_default/general/b_br.png" />
+		</borderset>
+		<!-- Window without Title, margin="top,bottom,left,right" -->
+		<borderset name="bsWindowNoTitle" margin="12,12,12,12">
+			<pixmap pos="bpTopLeft"     filename="skin_default/general/b_tls.png" />
+			<pixmap pos="bpTop"         filename="skin_default/general/b_ts.png"  />
+			<pixmap pos="bpTopRight"    filename="skin_default/general/b_trs.png" />
+			<pixmap pos="bpLeft"        filename="skin_default/general/b_l.png"   />
+			<pixmap pos="bpRight"       filename="skin_default/general/b_r.png"   />
+			<pixmap pos="bpBottomLeft"  filename="skin_default/general/b_bl.png"  />
+			<pixmap pos="bpBottom"      filename="skin_default/general/b_b.png"   />
+			<pixmap pos="bpBottomRight" filename="skin_default/general/b_br.png"  />
+		</borderset>
+		<borderset name="bsCursor">
+			<pixmap pos="bpTopLeft"     filename="skin_default/general/cursor_tl.png" />
+			<pixmap pos="bpTop"         filename="skin_default/general/cursor_t.png"  />
+			<pixmap pos="bpTopRight"    filename="skin_default/general/cursor_tr.png" />
+			<pixmap pos="bpLeft"        filename="skin_default/general/cursor_l.png"  />
+			<pixmap pos="bpRight"       filename="skin_default/general/cursor_r.png"  />
+			<pixmap pos="bpBottomLeft"  filename="skin_default/general/cursor_bl.png" />
+			<pixmap pos="bpBottom"      filename="skin_default/general/cursor_b.png"  />
+			<pixmap pos="bpBottomRight" filename="skin_default/general/cursor_br.png" />
+		</borderset>
+		<borderset name="bsFrame">
+			<pixmap pos="bpTopLeft"     filename="skin_default/general/cursor_tl.png" />
+			<pixmap pos="bpTop"         filename="skin_default/general/cursor_t.png"  />
+			<pixmap pos="bpTopRight"    filename="skin_default/general/cursor_tr.png" />
+			<pixmap pos="bpLeft"        filename="skin_default/general/cursor_l.png"  />
+			<pixmap pos="bpRight"       filename="skin_default/general/cursor_r.png"  />
+			<pixmap pos="bpBottomLeft"  filename="skin_default/general/cursor_bl.png" />
+			<pixmap pos="bpBottom"      filename="skin_default/general/cursor_b.png"  />
+			<pixmap pos="bpBottomRight" filename="skin_default/general/cursor_br.png" />
+		</borderset>
+		<borderset name="bsListboxEntrySelected">
+			<pixmap pos="bpTopLeft"     filename="skin_default/general/cursor_tl.png" />
+			<pixmap pos="bpTop"         filename="skin_default/general/cursor_t.png"  />
+			<pixmap pos="bpTopRight"    filename="skin_default/general/cursor_tr.png" />
+			<pixmap pos="bpLeft"        filename="skin_default/general/cursor_l.png"  />
+			<pixmap pos="bpRight"       filename="skin_default/general/cursor_r.png"  />
+			<pixmap pos="bpBottomLeft"  filename="skin_default/general/cursor_bl.png" />
+			<pixmap pos="bpBottom"      filename="skin_default/general/cursor_b.png"  />
+			<pixmap pos="bpBottomRight" filename="skin_default/general/cursor_br.png" />
+		</borderset>
+		<sliderset name="bsSlider" tip="5">
+			<pixmap pos="bpsBackgroundHorizontal" filename="skin_default/slider/slider_1280x10_hbg.png" />
+			<pixmap pos="bpsForegroundHorizontal" filename="skin_default/slider/slider_1280x10_hfg.png"  />
+			<pixmap pos="bpsBackgroundVertical"   filename="skin_default/slider/slider_10x720_vbg.png"  />
+			<pixmap pos="bpsForegroundVertical"   filename="skin_default/slider/slider_10x720_vfg.png"  />
+		</sliderset>
+	</windowstyle>
+	<!-- Fonts -->
+	<fonts>
+		<font filename="nmsbd.ttf" name="Regular" scale="90" />
+		<font filename="LiberationSans-Regular.ttf" name="Light" scale="90" />
+		<font filename="LiberationSans-Italic.ttf" name="LightItalic" scale="90" />
+		<font filename="LiberationSans-Bold.ttf" name="Bold" scale="90" />
+		<font filename="LiberationSans-BoldItalic.ttf" name="BoldItalic" scale="90" />
+		
+		<font filename="nmsbd.ttf" name="RegularLCD" scale="100" />
+		<font filename="lcd.ttf" name="LCD" scale="100" />
+		<font filename="tuxtxt.ttf" name="Console" scale="100" />
+		
+		<!-- Arabic and Thai char set replacement -->
+		<font filename="ae_AlMateen.ttf" name="Replacement" scale="90" replacement="1" />
+		<!-- Aliases that should be present -->
+		
+		<alias name="Body" font="Regular" size="20" height="25"/>
+		<alias name="ChoiceList" font="Regular" size="20" height="25"/>
+		<alias name="TextNormal" font="Regular" size="20" height="24"/>
+	</fonts>
+	<defaultfonts>
+		<font name="Regular" text="Regular" />
+		<font name="Light" text="Light" />
+		<font name="LightItalic" text="Light Italic" />
+		<font name="Bold" text="Bold" />
+		<font name="BoldItalic" text="Bold Italic" />
+	</defaultfonts>
+	<!-- Switch menu pic -->
+	<switchpixmap>
+		<pixmap name="menu_on" filename="skin_default/menu/menu_on.png"  />
+		<pixmap name="menu_off" filename="skin_default/menu/menu_off.png" />
+	</switchpixmap>
+	<!-- Scroll lable -->
+	<cascadingstylesheets name="smoth_scroll" >
+		<css name="step" value="1" />
+		<css name="steptime" value="150" />
+		<css name="startdelay" value="2000" />
+	</cascadingstylesheets>
+	<cascadingstylesheets name="midle_scroll" >
+		<css name="step" value="1" />
+		<css name="steptime" value="50" />
+		<css name="startdelay" value="2000" />
+	</cascadingstylesheets>
+	<!-- Slider pixmap style horizontal -->
+	<cascadingstylesheets name="slider_mini_horizontal" >
+		<css name="sliderLengthTip" value="3" />
+		<css name="sliderBackground" value="skin_default/slider/slider_1280x6_hbg.png" />
+		<css name="sliderForeground" value="skin_default/slider/slider_1280x6_hfg.png" />
+	</cascadingstylesheets>
+	<cascadingstylesheets name="slider_small_horizontal" >
+		<css name="sliderLengthTip" value="5" />
+		<css name="sliderBackground" value="skin_default/slider/slider_1280x10_hbg.png" />
+		<css name="sliderForeground" value="skin_default/slider/slider_1280x10_hfg.png" />
+	</cascadingstylesheets>
+	<cascadingstylesheets name="slider_small_horizontal_val" >
+		<css name="sliderLengthTip" value="5" />
+		<css name="sliderForeground" value="skin_default/slider/slider_1280x10_hfg.png" />
+	</cascadingstylesheets>
+	<cascadingstylesheets name="slider_small_horizontal_len" >
+		<css name="sliderLengthTip" value="5" />
+		<css name="sliderBackground" value="skin_default/slider/slider_1280x10_hbg.png" />
+		<css name="sliderForeground" value="skin_default/slider/slider_1280x10_hfr.png" />
+	</cascadingstylesheets>
+	<cascadingstylesheets name="slider_midle_horizontal" >
+		<css name="sliderLengthTip" value="6" />
+		<css name="sliderBackground" value="skin_default/slider/slider_1280x12_hbg.png" />
+		<css name="sliderForeground" value="skin_default/slider/slider_1280x12_hfg.png" />
+	</cascadingstylesheets>
+	<cascadingstylesheets name="slider_big_horizontal" >
+		<css name="sliderLengthTip" value="6" />
+		<css name="sliderBackground" value="skin_default/slider/slider_1280x22_hbg.png" />
+		<css name="sliderForeground" value="skin_default/slider/slider_1280x22_hfg.png" />
+	</cascadingstylesheets>
+	<!-- Tips pixmap style vertical -->
+	<cascadingstylesheets name="tips_vertical" >
+		<css name="tipTop" value="skin_default/gmenu/gmenu_up.png" />
+		<css name="tipBottom" value="skin_default/gmenu/gmenu_down.png" />
+	</cascadingstylesheets>
+	<cascadingstylesheets name="tips_horizontal" >
+		<css name="tipLeft" value="skin_default/gmenu/gmenu_left.png" />
+		<css name="tipReight" value="skin_default/gmenu/gmenu_reight.png" />
+	</cascadingstylesheets>
+	<cascadingstylesheets name="tips_vertical_20" >
+		<css name="sliderLengthTip" value="20" />
+	</cascadingstylesheets>
+	<cascadingstylesheets name="tips_horizontal_20" >
+		<css name="sliderLengthTip" value="20" />
+	</cascadingstylesheets>
+	<!-- Slider pixmap style vertical -->
+	<cascadingstylesheets name="slider_micro_vertical" >
+		<css name="sliderLengthTip" value="2" />
+		<css name="sliderBackground" value="skin_default/slider/slider_4x720_vbg.png" />
+		<css name="sliderForeground" value="skin_default/slider/slider_4x720_vfg.png" />
+	</cascadingstylesheets>
+	<cascadingstylesheets name="slider_mini_vertical" >
+		<css name="sliderLengthTip" value="3" />
+		<css name="sliderBackground" value="skin_default/slider/slider_6x720_vbg.png" />
+		<css name="sliderForeground" value="skin_default/slider/slider_6x720_vfg.png" />
+	</cascadingstylesheets>
+	<cascadingstylesheets name="slider_small_vertical" >
+		<css name="sliderLengthTip" value="5" />
+		<css name="sliderBackground" value="skin_default/slider/slider_10x720_vbg.png" />
+		<css name="sliderForeground" value="skin_default/slider/slider_10x720_vfg.png" />
+	</cascadingstylesheets>
+	<cascadingstylesheets name="slider_midle_vertical" >
+		<css name="sliderLengthTip" value="6" />
+		<css name="sliderBackground" value="skin_default/slider/slider_12x720_vbg.png" />
+		<css name="sliderForeground" value="skin_default/slider/slider_12x720_vfg.png" />
+	</cascadingstylesheets>
+	<!-- Slider pixmap style pointer -->
+	<cascadingstylesheets name="slider_small_pointer">
+		<css name="sliderPointer" value="skin_default/slider/slider_16x16.png" />
+	</cascadingstylesheets>
+	<cascadingstylesheets name="slider_midle_pointer">
+		<css name="sliderPointer" value="skin_default/slider/slider_18x18.png" />
+	</cascadingstylesheets>
+	<cascadingstylesheets name="slider_big_pointer">
+		<css name="sliderPointer" value="skin_default/slider/slider_34x34.png" />
+	</cascadingstylesheets>
+	<!-- Slider pixmap style for settings -->
+	<cascadingstylesheets name="slider_settings" >
+		<css name="sliderLength" value="240" />
+		<css name="sliderLengthTip" value="5" />
+		<css name="sliderBackground" value="skin_default/slider/slider_1280x10_hbg.png" />
+		<css name="sliderForeground" value="skin_default/slider/slider_1280x10_hfg.png" />
+		<css name="sliderPointer" value="skin_default/slider/slider_18x18.png" />
+	</cascadingstylesheets>
+	<!-- Slider pixmap style for multiepg -->
+	<cascadingstylesheets name="slider_multiepg" >
+		<css name="sliderLengthTip" value="5" />
+		<css name="sliderBackground" value="skin_default/slider/slider_1280x10_hbg.png" />
+		<css name="sliderForeground" value="skin_default/slider/slider_1280x10_hfg.png" />
+	</cascadingstylesheets>
+
+	<!-- ################################################# -->
+
+	<cascadingstylesheets name="selframe" >
+		<css name="position" value="100,140" />
+		<css name="size" value="540,475" />
+		<css name="frameOffset" value="0,35" />
+		<css name="frameSize" value="540,440" />
+		<css name="valign" value="top" />
+		<css name="font" value="Regular;22" />
+		<css name="foregroundColor" value="#3366cc" />
+		<css name="backgroundColor" value="#33000000" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="sellist" >
+		<css name="css" value="menu_w485h50i45tw" />
+		<css name="position" value="125,190" />
+		<css name="size" value="485,410" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="charframe" >
+		<css name="position" value="1140,140" />
+		<css name="size" value="70,475" />
+		<css name="frameOffset" value="10,35" />
+		<css name="frameSize" value="60,440" />
+		<css name="valign" value="top" />
+		<css name="font" value="Regular;22" />
+		<css name="foregroundColor" value="#3366cc" />
+		<css name="backgroundColor" value="#33000000" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="charlist" >
+		<css name="css" value="menu_w41h50i45tw" />
+		<css name="position" value="1160,190" />
+		<css name="size" value="42,410" />
+	</cascadingstylesheets>
+
+	<!-- ################################################# -->
+
+	<cascadingstylesheets name="menu_w41h50i45tw" >
+		<css name="css" value="tips_vertical" />
+		<css name="cursorSize" value="41,53" />
+		<css name="itemwidth" value="41" />
+		<css name="itemheight" value="45" />
+		<css name="runningStep" value="X9" />
+		<css name="runningLine" value="1" />
+		<css name="runningList" value="1" />
+		<css name="transparent" value="1" />
+		<css name="align" value="center" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showTip" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w250h50i45tw" >
+		<css name="css" value="tips_vertical" />
+		<css name="cursorSize" value="250,53" />
+		<css name="itemwidth" value="250" />
+		<css name="itemheight" value="45" />
+		<css name="runningStep" value="X9" />
+		<css name="runningLine" value="1" />
+		<css name="runningList" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showTip" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w250h50i50tw" >
+		<css name="css" value="tips_vertical" />
+		<css name="cursorSize" value="250,50" />
+		<css name="itemwidth" value="250" />
+		<css name="itemheight" value="50" />
+		<css name="runningStep" value="X10" />
+		<css name="runningLine" value="1" />
+		<css name="runningList" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showTip" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w465h40i35tw" >
+		<css name="css" value="tips_vertical" />
+		<css name="cursorSize" value="465,43" />
+		<css name="itemwidth" value="465" />
+		<css name="itemheight" value="35" />
+		<css name="runningStep" value="X7" />
+		<css name="runningLine" value="1" />
+		<css name="runningList" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showTip" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w485h50i45tw" >
+		<css name="css" value="tips_vertical" />
+		<css name="cursorSize" value="485,53" />
+		<css name="itemwidth" value="485" />
+		<css name="itemheight" value="45" />
+		<css name="runningStep" value="X9" />
+		<css name="runningLine" value="1" />
+		<css name="runningList" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showTip" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w485h50i50" >
+		<css name="css" value="slider_mini_vertical" />
+		<css name="cursorSize" value="485,50" />
+		<css name="itemwidth" value="485" />
+		<css name="itemheight" value="50" />
+		<css name="runningStep" value="X10" />
+		<css name="runningLine" value="1" />
+		<css name="transparent" value="1" />
+		<css name="scrollbarMode" value="showOnDemand" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w485h50i50w" >
+		<css name="css" value="slider_mini_vertical" />
+		<css name="cursorSize" value="485,50" />
+		<css name="itemwidth" value="485" />
+		<css name="itemheight" value="50" />
+		<css name="runningStep" value="X10" />
+		<css name="runningLine" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showOnDemand" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w485h50i50wt" >
+		<css name="css" value="tips_vertical" />
+		<css name="cursorSize" value="485,50" />
+		<css name="itemwidth" value="485" />
+		<css name="itemheight" value="50" />
+		<css name="runningStep" value="X10" />
+		<css name="runningLine" value="1" />
+		<css name="runningList" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showTip" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w485h60i55wt" >
+		<css name="css" value="tips_vertical" />
+		<css name="cursorSize" value="485,60" />
+		<css name="itemwidth" value="485" />
+		<css name="itemheight" value="55" />
+		<css name="runningStep" value="X11" />
+		<css name="runningLine" value="1" />
+		<css name="runningList" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showTip" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w485h65i60wnt" >
+		<css name="css" value="slider_mini_vertical" />
+		<css name="cursorSize" value="485,65" />
+		<css name="itemwidth" value="485" />
+		<css name="itemheight" value="60" />
+		<css name="runningList" value="0" />
+		<css name="runningCursor" value="0" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showOnDemand" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w485h65i60w" >
+		<css name="css" value="slider_mini_vertical" />
+		<css name="cursorSize" value="485,65" />
+		<css name="itemwidth" value="485" />
+		<css name="itemheight" value="60" />
+		<css name="runningStep" value="X12" />
+		<css name="runningLine" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showOnDemand" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w485h70i65w" >
+		<css name="css" value="slider_mini_vertical" />
+		<css name="cursorSize" value="485,70" />
+		<css name="itemwidth" value="485" />
+		<css name="itemheight" value="65" />
+		<css name="runningStep" value="X13" />
+		<css name="runningLine" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showOnDemand" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w485x75i70w" >
+		<css name="css" value="slider_mini_vertical" />
+		<css name="cursorSize" value="485,75" />
+		<css name="itemwidth" value="485" />
+		<css name="itemheight" value="70" />
+		<css name="runningStep" value="X14" />
+		<css name="runningLine" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showOnDemand" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w485x80i75w" >
+		<css name="css" value="slider_mini_vertical" />
+		<css name="cursorSize" value="485,80" />
+		<css name="itemwidth" value="485" />
+		<css name="itemheight" value="75" />
+		<css name="runningStep" value="X15" />
+		<css name="runningLine" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showOnDemand" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w485x80i75tw" >
+		<css name="css" value="tips_vertical" />
+		<css name="cursorSize" value="485,80" />
+		<css name="itemwidth" value="485" />
+		<css name="itemheight" value="75" />
+		<css name="runningStep" value="X15" />
+		<css name="runningLine" value="1" />
+		<css name="runningList" value="1" />
+		<css name="transparent" value="1" />
+		<css name="scrollbarMode" value="showTip" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w485x95i90w" >
+		<css name="css" value="slider_mini_vertical" />
+		<css name="cursorSize" value="485,95" />
+		<css name="itemwidth" value="485" />
+		<css name="itemheight" value="90" />
+		<css name="runningStep" value="X18" />
+		<css name="runningLine" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showOnDemand" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w485h110i105w" >
+		<css name="css" value="slider_mini_vertical" />
+		<css name="cursorSize" value="485,110" />
+		<css name="itemwidth" value="485" />
+		<css name="itemheight" value="105" />
+		<css name="runningStep" value="X21" />
+		<css name="runningLine" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showOnDemand" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w510h50i45tw" >
+		<css name="css" value="tips_vertical" />
+		<css name="cursorSize" value="510,53" />
+		<css name="itemwidth" value="510" />
+		<css name="itemheight" value="45" />
+		<css name="runningStep" value="X9" />
+		<css name="runningLine" value="1" />
+		<css name="runningList" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showTip" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w565h50i45wt" >
+		<css name="css" value="tips_vertical" />
+		<css name="cursorSize" value="565,53" />
+		<css name="itemwidth" value="563" />
+		<css name="itemheight" value="45" />
+		<css name="runningStep" value="X9" />
+		<css name="runningLine" value="1" />
+		<css name="runningList" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showTip" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w842h62i60wt" >
+		<css name="css" value="tips_vertical" />
+		<css name="cursorSize" value="842,62" />
+		<css name="itemwidth" value="842" />
+		<css name="itemheight" value="60" />
+		<css name="runningStep" value="X10" />
+		<css name="runningLine" value="1" />
+		<css name="runningList" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showTip" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_w1096h80i80wt" >
+		<css name="css" value="tips_vertical" />
+		<css name="cursorSize" value="1096,80" />
+		<css name="itemwidth" value="1096" />
+		<css name="itemheight" value="80" />
+		<css name="runningStep" value="X16" />
+		<css name="runningLine" value="1" />
+		<css name="runningList" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showTip" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_wXXhXXi45wt" >
+		<css name="css" value="tips_vertical" />
+		<css name="itemheight" value="45" />
+		<css name="runningStep" value="X9" />
+		<css name="runningLine" value="1" />
+		<css name="runningList" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showTip" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_wXXhXXi50w" >
+		<css name="css" value="slider_mini_vertical" />
+		<css name="itemheight" value="50" />
+		<css name="runningStep" value="X10" />
+		<css name="runningLine" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showOnDemand" />
+	</cascadingstylesheets>
+
+	<cascadingstylesheets name="menu_wXXhXXiXXwt" >
+		<css name="css" value="tips_vertical" />
+		<css name="runningStep" value="X10" />
+		<css name="runningLine" value="1" />
+		<css name="runningList" value="1" />
+		<css name="transparent" value="1" />
+		<css name="enableWrapAround" value="1" />
+		<css name="scrollbarMode" value="showTip" />
+	</cascadingstylesheets>
+
+	<!-- ################################################# -->
+
+	<!-- Windows full screen -->
+	<cascadingstylesheets name="full_screen" >
+		<css name="position" value="0,0" />
+		<css name="size" value="1280,720" />
+		<css name="flags" value="wfNoBorder" />
+	</cascadingstylesheets>
+	<!-- Background for Buttons red -->
+	<cascadingstylesheets name="button_pix_red" >
+		<css name="position" value="240,635" />
+		<css name="size" value="200,40" />
+		<css name="pixmap" value="skin_default/buttons/button_200x40_red.png" />
+		<css name="alphatest" value="on" />
+		<css name="zPosition" value="2" />
+	</cascadingstylesheets>
+	<!-- Background for Buttons green -->
+	<cascadingstylesheets name="button_pix_green" >
+		<css name="position" value="440,635" />
+		<css name="size" value="200,40" />
+		<css name="pixmap" value="skin_default/buttons/button_200x40_green.png" />
+		<css name="alphatest" value="on" />
+		<css name="zPosition" value="2" />
+	</cascadingstylesheets>
+	<!-- Background for Buttons yellow -->
+	<cascadingstylesheets name="button_pix_yellow" >
+		<css name="position" value="640,635" />
+		<css name="size" value="200,40" />
+		<css name="pixmap" value="skin_default/buttons/button_200x40_yellow.png" />
+		<css name="alphatest" value="on" />
+		<css name="zPosition" value="2" />
+	</cascadingstylesheets>
+	<!-- Background for Buttons blue -->
+	<cascadingstylesheets name="button_pix_blue" >
+		<css name="position" value="840,635" />
+		<css name="size" value="200,40" />
+		<css name="pixmap" value="skin_default/buttons/button_200x40_blue.png" />
+		<css name="alphatest" value="on" />
+		<css name="zPosition" value="2" />
+	</cascadingstylesheets>
+	<!-- Buttons red -->
+	<cascadingstylesheets name="button_red" >
+		<css name="position" value="250,635" />
+		<css name="size" value="180,40" />
+		<css name="font" value="Regular;20" />
+		<css name="halign" value="center" />
+		<css name="valign" value="center" />
+		<css name="backgroundColor" value="#ffffff" />
+		<css name="shadowColor" value="#9f1313" />
+		<css name="runningLine" value="2" />
+		<css name="noWrap" value="1" />
+		<css name="transparent" value="1" />
+		<css name="zPosition" value="3" />
+	</cascadingstylesheets>
+	<!-- Buttons green -->
+	<cascadingstylesheets name="button_green" >
+		<css name="position" value="450,635" />
+		<css name="size" value="180,40" />
+		<css name="font" value="Regular;20" />
+		<css name="halign" value="center" />
+		<css name="valign" value="center" />
+		<css name="backgroundColor" value="#ffffff" />
+		<css name="shadowColor" value="#1f771f" />
+		<css name="runningLine" value="2" />
+		<css name="noWrap" value="1" />
+		<css name="transparent" value="1" />
+		<css name="zPosition" value="3" />
+	</cascadingstylesheets>
+	<!-- Buttons yellow -->
+	<cascadingstylesheets name="button_yellow" >
+		<css name="position" value="650,635" />
+		<css name="size" value="180,40" />
+		<css name="font" value="Regular;20" />
+		<css name="halign" value="center" />
+		<css name="valign" value="center" />
+		<css name="backgroundColor" value="#ffffff" />
+		<css name="shadowColor" value="#a08500" />
+		<css name="runningLine" value="2" />
+		<css name="noWrap" value="1" />
+		<css name="transparent" value="1" />
+		<css name="zPosition" value="3" />
+	</cascadingstylesheets>
+	<!-- Buttons blue -->
+	<cascadingstylesheets name="button_blue" >
+		<css name="position" value="850,635" />
+		<css name="size" value="180,40" />
+		<css name="font" value="Regular;20" />
+		<css name="halign" value="center" />
+		<css name="valign" value="center" />
+		<css name="backgroundColor" value="#ffffff" />
+		<css name="shadowColor" value="#18188b" />
+		<css name="runningLine" value="2" />
+		<css name="noWrap" value="1" />
+		<css name="transparent" value="1" />
+		<css name="zPosition" value="3" />
+	</cascadingstylesheets>
+	<cascadingstylesheets name="status_icons_tv">
+		<css name="pixmaps" value="
+			 skin_default/icons/icon_r.png,
+			 skin_default/icons/icon_crypt.png,
+			 skin_default/icons/icon_format.png,
+			 skin_default/icons/icon_dolby.png,
+			 skin_default/icons/icon_dts.png,
+			 skin_default/icons/icon_downmix.png,
+			 skin_default/icons/icon_hd.png,
+			 skin_default/icons/icon_sd.png,
+			 skin_default/icons/icon_txt.png,
+			 skin_default/icons/icon_ss.png,
+			 skin_default/icons/icon_sub.png,
+			 skin_default/icons/icon_hbbtv.png,
+			 skin_default/icons/icon_a.png,
+			 skin_default/icons/icon_b.png,
+			 skin_default/icons/icon_c.png,
+			 skin_default/icons/icon_d.png,
+			 skin_default/icons/icon_snt.png,
+			 skin_default/icons/icon_stream.png,
+			 skin_default/icons/icon_play.png,
+			 skin_default/icons/icon_pause.png,
+			 skin_default/icons/icon_slow_2.png,
+			 skin_default/icons/icon_slow_4.png,
+			 skin_default/icons/icon_slow_6.png,
+			 skin_default/icons/icon_slow_8.png,
+			 skin_default/icons/icon_slow_12.png,
+			 skin_default/icons/icon_slow_16.png,
+			 skin_default/icons/icon_slow_25.png,
+			 skin_default/icons/icon_slow.png,
+			 skin_default/icons/icon_fast_2.png,
+			 skin_default/icons/icon_fast_4.png,
+			 skin_default/icons/icon_fast_6.png,
+			 skin_default/icons/icon_fast_8.png,
+			 skin_default/icons/icon_fast_12.png,
+			 skin_default/icons/icon_fast_16.png,
+			 skin_default/icons/icon_fast_24.png,
+			 skin_default/icons/icon_fast_32.png,
+			 skin_default/icons/icon_fast_48.png,
+			 skin_default/icons/icon_fast_64.png,
+			 skin_default/icons/icon_fast_96.png,
+			 skin_default/icons/icon_fast_128.png,
+			 skin_default/icons/icon_rewind.png,
+			 skin_default/icons/icon_forward.png"/>
+	</cascadingstylesheets>
+	<cascadingstylesheets name="status_icons_movie" >
+		<css name="pixmaps" value="
+			 skin_default/icons/icon_crypt.png,
+			 skin_default/icons/icon_format.png,
+			 skin_default/icons/icon_dolby.png,
+			 skin_default/icons/icon_dts.png,
+			 skin_default/icons/icon_downmix.png,
+			 skin_default/icons/icon_hd.png,
+			 skin_default/icons/icon_sd.png,
+			 skin_default/icons/icon_txt.png,
+			 skin_default/icons/icon_ss.png,
+			 skin_default/icons/icon_sub.png,
+			 skin_default/icons/icon_hbbtv.png,
+			 skin_default/icons/icon_stream.png,
+			 skin_default/icons/icon_live.png,
+			 skin_default/icons/icon_play.png,
+			 skin_default/icons/icon_pause.png,
+			 skin_default/icons/icon_slow_2.png,
+			 skin_default/icons/icon_slow_4.png,
+			 skin_default/icons/icon_slow_6.png,
+			 skin_default/icons/icon_slow_8.png,
+			 skin_default/icons/icon_slow_12.png,
+			 skin_default/icons/icon_slow_16.png,
+			 skin_default/icons/icon_slow_25.png,
+			 skin_default/icons/icon_slow.png,
+			 skin_default/icons/icon_fast_2.png,
+			 skin_default/icons/icon_fast_4.png,
+			 skin_default/icons/icon_fast_6.png,
+			 skin_default/icons/icon_fast_8.png,
+			 skin_default/icons/icon_fast_12.png,
+			 skin_default/icons/icon_fast_16.png,
+			 skin_default/icons/icon_fast_24.png,
+			 skin_default/icons/icon_fast_32.png,
+			 skin_default/icons/icon_fast_48.png,
+			 skin_default/icons/icon_fast_64.png,
+			 skin_default/icons/icon_fast_96.png,
+			 skin_default/icons/icon_fast_128.png,
+			 skin_default/icons/icon_rewind.png,
+			 skin_default/icons/icon_forward.png,
+			 skin_default/icons/icon_gs.png,
+			 skin_default/icons/icon_ff.png,
+			 skin_default/icons/icon_in.png" />
+	</cascadingstylesheets>
+	
+	<!-- General Menu -->
+	<screen css="full_screen" name="GeneralMenu" zPosition="2">
+			<ePixmap position="622,30" size="35,10" pixmap="skin_default/gmenu/gmenu_up.png" zPosition="1" />
+			<widget position="50,49" size="1200,22" name="title" font="Regular;20" runningLine="2" zPosition="1" transparent="1" foregroundColors="#555555,#999999" />
+			
+			<widget position="45,-60" size="1190,60" name="sub_list"
+				orientation="orHorizontal"
+				itemwidth="170" itemheight="60"
+				runningList="1" runningStep="X17"
+				scrollbarMode="showTip" css="tips_horizontal"
+				backgroundColorSelected="#33000000"
+				enableWrapAround="1"
+				align="center"
+				transparent="1"
+				zPosition="2"/>
+			
+			<!-- ePoint(45,224) eSize(1190,0) -->
+			<!-- ePoint(45,85)  eSize(1190,283) -->
+			<widget position="45,85" size="1190,283" name="ext_list"
+				orientation="orHorizontal"
+				itemwidth="170" itemheight="283"
+				runningList="1" runningStep="X17"
+				cursorSize="170,232"
+				scrollbarMode="showTip" css="tips_horizontal"
+				backgroundColorSelected="#33000000"
+				shadowColor="#000000" shadowOffset="-1,-1"
+				runningLine="2"
+				enableWrapAround="1"
+				align="center"
+				transparent="1"
+				zPosition="1"/>
+			
+			<ePixmap position="0,360" size="40,76" pixmap="skin_default/gmenu/gmenu_gen.png" alphatest="on" zPosition="2" />
+			<ePixmap position="1240,360" size="40,76" pixmap="skin_default/gmenu/gmenu_gen.png" alphatest="on" zPosition="2" />
+			
+			<widget position="40,360" size="1200,76" name="gen_list"
+				orientation="orHorizontal"
+				itemwidth="240" itemheight="76"
+				runningList="1" runningStep="X24"
+				
+				foregroundColor="#777777"
+				foregroundColorSelected="#ffffff"
+				
+				foregroundColorPhotos="red"
+				foregroundColorMusic="green"
+				foregroundColorMovies="yellow"
+				foregroundColorSetup="blue"
+				
+				foregroundColorPhotosSelected="lightred"
+				foregroundColorMusicSelected="lightgreen"
+				foregroundColorMoviesSelected="lightyellow"
+				foregroundColorSetupSelected="lightblue"
+				
+				backgroundColor="#33000000"
+				backgroundColorSelected="#33000000"
+				enableWrapAround="1"
+				transparent="1"
+				zPosition="2" />
+			
+			<widget position="40,440" size="1200,256" name="apl_list"
+				enableMultiList="1"
+				orientation="orVertical"
+				itemwidth="240" itemheight="128"
+				runningList="1" runningStep="X13"
+				cursorSize="240,110"
+				backgroundColor="#33000000"
+				backgroundColorSelected="#33000000"
+				scrollbarMode="showTip" css="tips_vertical"
+				enableWrapAroundHorizontal="1"
+				transparent="1"
+				zPosition="2"/>
+			
+			<widget position="0,0" size="174,174" name="cursor" transparent="1" zPosition="3"/>
+	</screen>
+	<!--r Main infobar -->
+	<screen name="InfoBar" flags="wfNoBorder" position="0,720" size="0,0" backgroundColor="transparent">
+		<!-- Dummi -->
+	</screen>
+	<screen name="InfoBarPerfomance" flags="wfNoBorder" position="0,720" size="1280,300" backgroundColor="transparent">
+		<!-- Background -->
+		<ePixmap position="0,0" size="1280,75" pixmap="skin_default/general/infobar.png" zPosition="-1" />
+		<eLabel position="0,75" size="1280,225" backgroundColor="background" zPosition="-1" />
+		<!-- Channel logo (Picon) -->
+		<widget position="60,102" size="125,82" source="session.CurrentService" picon_id="service_125x82" type="service" render="Picon" pixmap="skin_default/frame/frame_125x82.png" alphatest="blend" zPosition="2" transparent="1">
+			<convert type="ServiceName">PicReferenceNew,config.usage.style_clock_of_infobar,digital</convert>
+		</widget>
+		<widget position="60,102" size="125,82" source="session.CurrentService" picon_id="service_125x82" type="service" render="Picon" pixmap="skin_default/frame/frame_125x82.png" alphatest="blend" zPosition="2" transparent="1">
+			<convert type="ServiceName">PicReferenceNew,config.usage.style_clock_of_infobar,date</convert>
+		</widget>
+		<widget position="70,112" size="105,62" source="session.CurrentService" render="Label" font="Regular;16" halign="center" valign="center" zPosition="3" transparent="1" >
+			<convert type="ServiceName">PicReferenceNewAlt,service,service_125x82,nomirror,config.usage.style_clock_of_infobar,digital</convert>
+		</widget>
+		<widget position="70,112" size="105,62" source="session.CurrentService" render="Label" font="Regular;16" halign="center" valign="center" zPosition="3" transparent="1" >
+			<convert type="ServiceName">PicReferenceNewAlt,service,service_125x82,nomirror,config.usage.style_clock_of_infobar,date</convert>
+		</widget>
+		<!-- Digital Clock and Picon -->
+		<widget position="60,72" size="125,35" source="global.CurrentTime" render="Label" font="Regular;24"  halign="center" backgroundColor="#33000000" transparent="1">
+			<convert type="ClockToText">WithSeconds,config.usage.style_clock_of_infobar,digital</convert>
+		</widget>
+		<!-- Date and Picon -->
+		<widget position="75,72" size="95,35" source="global.CurrentTime" render="Label" font="Regular;24"  halign="center" transparent="1" zPosition="1">
+			<convert type="ClockToText">Format:%d/%m/%y,config.usage.style_clock_of_infobar,date</convert>
+		</widget>
+		<!-- Analog Clock -->
+		<widget position="75,72" size="95,30" source="global.CurrentTime" render="Label" font="Regular;24"  halign="center" transparent="1" zPosition="1">
+			<convert type="ClockToText">Format:%d/%m/%y,config.usage.style_clock_of_infobar,analog</convert>
+		</widget>
+		<widget position="75,103" size="95,75" source="session.CurrentService" render="Pixmap" pixmap="skin_default/frame/clock_95x75.png" zPosition="3" >
+			<convert type="ConfigEntryTest">config.usage.style_clock_of_infobar,analog</convert>
+			<convert type="ConditionalShowHide">Default</convert>
+		</widget>
+		<widget position="110,128" size="24,24" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="4" transparent="1">
+			<convert type="ClockToText">AHours,config.usage.style_clock_of_infobar,analog,config.misc.statusShowInfobar,True</convert>
+		</widget>
+		<widget position="100,118" size="44,44" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="5" transparent="1">
+			<convert type="ClockToText">AMinutes,config.usage.style_clock_of_infobar,analog,config.misc.statusShowInfobar,True</convert>
+		</widget>
+		<widget position="95,113" size="54,54" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#f23d21" zPosition="6" transparent="1">
+			<convert type="ClockToText">ASeconds,config.usage.style_clock_of_infobar,analog,config.misc.statusShowInfobar,True</convert>
+		</widget>
+		<!-- Big Analog Clock -->
+		<widget position="75,68" size="109,109" source="session.CurrentService" render="Pixmap" pixmap="skin_default/frame/clock_109x109.png" zPosition="3" >
+			<convert type="ConfigEntryTest">config.usage.style_clock_of_infobar,biganalog</convert>
+			<convert type="ConditionalShowHide">Default</convert>
+		</widget>
+		<widget position="113,106" size="34,34" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="4" transparent="1">
+			<convert type="ClockToText">AHours,config.usage.style_clock_of_infobar,biganalog,config.misc.statusShowInfobar,True</convert>
+		</widget>
+		<widget position="103,96" size="54,54" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="5" transparent="1">
+			<convert type="ClockToText">AMinutes,config.usage.style_clock_of_infobar,biganalog,config.misc.statusShowInfobar,True</convert>
+		</widget>
+		<widget position="98,91" size="64,64" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#f23d21" zPosition="6" transparent="1">
+			<convert type="ClockToText">ASeconds,config.usage.style_clock_of_infobar,biganalog,config.misc.statusShowInfobar,True</convert>
+		</widget>
+		<!-- Service name -->
+		<widget position="196,72" size="355,30" source="session.CurrentService" render="Label" font="Regular;24"  halign="left" noWrap="1" backgroundColor="#33000000" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<!-- Timeshift Remaining -->
+		<widget position="558,77" size="145,24" source="session.CurrentService" render="Label" font="Regular;22" halign="right" noWrap="1" foregroundColor="red" backgroundColor="red" transparent="1">
+			<convert type="ServicePosition">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<!--widget position="196,71" size="420,53" source="session.CurrentService" render="Label" font="Regular;26"  halign="left" noWrap="1" backgroundColor="#33000000" transparent="1">
+			<convert type="ExtServiceInfo">ServiceName</convert>
+		</widget-->
+		<!-- Progressbar (current event/timeshift duration)-->
+		<widget position="195,107" size="508,10" source="session.Event_Now" render="ProgressTimeshiftLen" css="slider_small_horizontal_len" transparent="1" zPosition="1" osize="250,10">
+			<convert type="ServicePosition">Progress</convert>
+		</widget>
+		<widget position="195,107" size="508,10" source="session.Event_Now" render="ProgressTimeshiftVal" css="slider_small_horizontal_val" transparent="1" zPosition="2" osize="250,10">
+			<convert type="ServicePosition">Progress</convert>
+		</widget>
+		<!-- Progressbar (next event timeshift duration)-->
+		<widget position="453,107" size="250,10" source="session.Event_Next" render="ProgressTimeshiftLen" css="slider_small_horizontal_len" transparent="1" zPosition="3" zhide="1" >
+			<convert type="ServicePosition">Progress</convert>
+		</widget>
+		<!-- Event (now) -->
+		<!--ePixmap pixmap="skin_default/icons/icon_event.png" position="182,78" size="15,10" alphatest="on" /-->
+		<widget position="196,128" size="65,24" source="session.Event_Now" render="Label" font="Regular;22"  backgroundColor="#33000000" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget position="281,128" size="280,22" source="session.Event_Now" render="Label" font="Regular;20"  runningLine="1" noWrap="1" backgroundColor="#33000000" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget position="556,128" size="145,24" source="session.Event_Now" render="Label" font="Regular;22"  backgroundColor="#33000000" halign="right" transparent="1">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<!-- Event (next) -->
+		<widget position="196,154" size="65,24" source="session.Event_Next" render="Label" font="Regular;22"  backgroundColor="#33000000" foregroundColor="#777777" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget position="281,154" size="280,22" source="session.Event_Next" render="Label" font="Regular;20"  runningLine="1" noWrap="1" backgroundColor="#33000000" foregroundColor="#777777" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget position="556,154" size="145,24" source="session.Event_Next" render="Label" font="Regular;22"  backgroundColor="#33000000" foregroundColor="#777777" halign="right" transparent="1">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<!-- Provider name, satellite name and orbital position rotation -->
+		<!--
+		<widget position="780,100" size="430,28" source="session.CurrentService" render="Label" font="Regular;26" valign="bottom" halign="right" noWrap="0" backgroundColor="#33000000" transparent="1">
+			<convert type="ExtServiceInfo" source="session.CurrentService">Provider</convert>
+			<convert type="ExtServiceInfo" source="session.CurrentService">SatNameOrbitalPosition</convert>
+			<convert type="ConverterRotator">3</convert>
+		</widget>
+		-->
+		<!-- Provider name, satellite name and orbital position multiline -->
+		<widget position="780,57" size="430,64" source="session.CurrentService" render="Label" font="Regular;26" valign="bottom" halign="right" noWrap="0" backgroundColor="#33000000" transparent="1">
+			<convert type="ExtServiceInfo">ConfigProviderMultiline</convert>
+		</widget>
+		<!-- Blinking pixmap (recording in progress?) -->
+		<widget position="710,136" size="48,48" source="session.RecordState" render="Pixmap" pixmap="skin_default/icons/icon_rec.png" zPosition="1" >
+			<convert type="ConfigEntryTest">config.usage.recinfobar,True,Invert,CheckSourceBoolean</convert>
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<!-- Status Icons -->
+		<widget position="785,136" size="430,48" source="session.CurrentService" render="PixmapBox" halign="right" alphatest="on" zPosition="2" transparent="1" css="status_icons_tv">
+			<convert type="ServiceInfo">Status</convert>
+		</widget>
+		
+		<!--applet type="onShow">
+	#### this should be factored out into some helper code, but currently demonstrates applets. ####
+		</applet-->
+		
+		<!-- ##### Extended InfoBar ##### -->
+		<eLabel position="80,211" size="1120,1" backgroundColor="#3366cc" zPosition="2" />
+		<!-- Video Resolution -->
+		<widget position="72,220" size="45,18" source="session.CurrentService" zPosition="2" render="Label" halign="right" font="Regular;16"  noWrap="1" backgroundColor="#102e59" transparent="1" >
+			<convert type="ServiceInfo">VideoWidth</convert>
+		</widget>
+		<eLabel position="117,219" size="8,18" text="x" zPosition="2" halign="center" font="Regular;16"  noWrap="1" backgroundColor="#102e59" transparent="1" />
+		<widget position="125,220" size="45,18" source="session.CurrentService" zPosition="2" render="Label" halign="left" font="Regular;16"  noWrap="1" backgroundColor="#102e59" transparent="1">
+			<convert type="ServiceInfo">VideoHeight</convert>
+		</widget>
+		<!-- Signal Quality -->
+		<eLabel position="175,220" size="45,22" text="SNR :" font="Regular;16" halign="right" backgroundColor="#102e59" foregroundColor="#cccccc" transparent="1" />
+		<widget position="225,220" size="70,22" source="session.FrontendStatus" render="Label" halign="left" font="Regular;16" backgroundColor="#102e59" foregroundColor="#e7e7e7" transparent="1">
+			<convert type="FrontendInfo">SNRdB</convert>
+		</widget>
+		<!-- Bit error rate -->
+		<eLabel position="293,220" size="45,22" text="BER :" font="Regular;16" halign="right" backgroundColor="#102e59" foregroundColor="#cccccc" transparent="1" />
+		<widget position="343,220" size="28,22" source="session.FrontendStatus" render="Label" font="Regular;16" halign="left" backgroundColor="#102e59" foregroundColor="#e7e7e7" transparent="1">
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<!-- Frequency / Polarization / Symbolrate / FEC / Modulation -->
+		<widget position="370,220" size="334,18" source="session.CurrentService" render="Label" font="Regular;16" halign="left"  runningLine="1" noWrap="1" backgroundColor="#102e59" transparent="1">
+			<convert type="ExtServiceInfo">ServiceTI</convert>
+		</widget>
+		<!-- CAMD info -->
+		<widget position="709,220" size="491,18" source="session.CurrentService" render="Label" font="Regular;16" halign="right"  noWrap="1" backgroundColor="#102e59" transparent="1">
+			<convert type="CamdInfo">CamdInfo</convert>
+		</widget>
+		<!-- ##### Expert InfoBar ##### -->
+		<!-- CAMD expert info -->
+		<widget position="85,256" size="1110,16" source="session.CurrentService" render="Label" font="Regular;14" halign="center" valign="center" runningLine="2" noWrap="1" backgroundColor="#102e59" transparent="1">
+			<convert type="CamdInfo">CamdExpertInfo</convert>
+		</widget>
+	</screen>
+	<screen name="SeekBarDVB" flags="wfNoBorder" position="0,510" size="1280,300" backgroundColor="transparent">
+		<!-- Background -->
+		<ePixmap position="0,0" size="1280,75" pixmap="skin_default/general/infobar.png" zPosition="-1" />
+		<eLabel position="0,75" size="1280,225" backgroundColor="background" zPosition="-1" />
+		<!-- Channel logo (Picon) -->
+		<widget position="60,102" size="125,82" source="session.CurrentService" picon_id="service_125x82" type="service" render="Picon" pixmap="skin_default/frame/frame_125x82.png" alphatest="blend" zPosition="2" transparent="1">
+			<convert type="ServiceName">PicReferenceNew,config.usage.style_clock_of_infobar,digital</convert>
+		</widget>
+		<widget position="60,102" size="125,82" source="session.CurrentService" picon_id="service_125x82" type="service" render="Picon" pixmap="skin_default/frame/frame_125x82.png" alphatest="blend" zPosition="2" transparent="1">
+			<convert type="ServiceName">PicReferenceNew,config.usage.style_clock_of_infobar,date</convert>
+		</widget>
+		<widget position="70,112" size="105,62" source="session.CurrentService" render="Label" font="Regular;16" halign="center" valign="center" zPosition="3" transparent="1" >
+			<convert type="ServiceName">PicReferenceNewAlt,service,service_125x82,nomirror,config.usage.style_clock_of_infobar,digital</convert>
+		</widget>
+		<widget position="70,112" size="105,62" source="session.CurrentService" render="Label" font="Regular;16" halign="center" valign="center" zPosition="3" transparent="1" >
+			<convert type="ServiceName">PicReferenceNewAlt,service,service_125x82,nomirror,config.usage.style_clock_of_infobar,date</convert>
+		</widget>
+		<!-- Digital Clock and Picon -->
+		<widget position="60,72" size="125,35" source="global.CurrentTime" render="Label" font="Regular;24"  halign="center" backgroundColor="#33000000" transparent="1">
+			<convert type="ClockToText">WithSeconds,config.usage.style_clock_of_infobar,digital</convert>
+		</widget>
+		<!-- Date and Picon -->
+		<widget position="75,72" size="95,35" source="global.CurrentTime" render="Label" font="Regular;24"  halign="center" transparent="1" zPosition="1">
+			<convert type="ClockToText">Format:%d/%m/%y,config.usage.style_clock_of_infobar,date</convert>
+		</widget>
+		<!-- Analog Clock -->
+		<widget position="75,72" size="95,30" source="global.CurrentTime" render="Label" font="Regular;24"  halign="center" transparent="1" zPosition="1">
+			<convert type="ClockToText">Format:%d/%m/%y,config.usage.style_clock_of_infobar,analog</convert>
+		</widget>
+		<widget position="75,103" size="95,75" source="session.CurrentService" render="Pixmap" pixmap="skin_default/frame/clock_95x75.png" zPosition="3" >
+			<convert type="ConfigEntryTest">config.usage.style_clock_of_infobar,analog</convert>
+			<convert type="ConditionalShowHide">Default</convert>
+		</widget>
+		<widget position="110,128" size="24,24" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="4" transparent="1">
+			<convert type="ClockToText">AHours,config.usage.style_clock_of_infobar,analog</convert>
+		</widget>
+		<widget position="100,118" size="44,44" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="5" transparent="1">
+			<convert type="ClockToText">AMinutes,config.usage.style_clock_of_infobar,analog</convert>
+		</widget>
+		<widget position="95,113" size="54,54" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#f23d21" zPosition="6" transparent="1">
+			<convert type="ClockToText">ASeconds,config.usage.style_clock_of_infobar,analog</convert>
+		</widget>
+		<!-- Big Analog Clock -->
+		<widget position="75,68" size="109,109" source="session.CurrentService" render="Pixmap" pixmap="skin_default/frame/clock_109x109.png" zPosition="3" >
+			<convert type="ConfigEntryTest">config.usage.style_clock_of_infobar,biganalog</convert>
+			<convert type="ConditionalShowHide">Default</convert>
+		</widget>
+		<widget position="113,106" size="34,34" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="4" transparent="1">
+			<convert type="ClockToText">AHours,config.usage.style_clock_of_infobar,biganalog</convert>
+		</widget>
+		<widget position="103,96" size="54,54" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="5" transparent="1">
+			<convert type="ClockToText">AMinutes,config.usage.style_clock_of_infobar,biganalog</convert>
+		</widget>
+		<widget position="98,91" size="64,64" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#f23d21" zPosition="6" transparent="1">
+			<convert type="ClockToText">ASeconds,config.usage.style_clock_of_infobar,biganalog</convert>
+		</widget>
+		<!-- Timeshift Timeplay -->
+		<widget position="195,77" size="145,24" source="session.CurrentService" render="Label" font="Regular;22" halign="left" noWrap="1" foregroundColor="#3366cc" backgroundColor="#3366cc" transparent="1" >
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<!-- Timeshift Remaining -->
+		<widget position="558,77" size="145,24" source="session.CurrentService" render="Label" font="Regular;22" halign="right" noWrap="1" foregroundColor="red" backgroundColor="red" transparent="1">
+			<convert type="ServicePosition">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		
+		<!-- Warning message -->
+		<widget position="195,77" size="508,24" name="warning" font="Regular;22" halign="center" transparent="1" runningLine="2" />
+		
+		<!-- Progressbar (current event/timeshift duration)-->
+		<widget position="195,107" size="508,10" source="session.Event_Now" render="ProgressTimeshiftLen" css="slider_small_horizontal_len" transparent="1" zPosition="1" osize="250,10">
+			<convert type="ServicePosition">Progress</convert>
+		</widget>
+		<widget position="195,107" size="508,10" source="session.Event_Now" render="ProgressTimeshiftVal" css="slider_small_horizontal_val" transparent="1" zPosition="2" osize="250,10">
+			<convert type="ServicePosition">Progress</convert>
+		</widget>
+		<!-- Progressbar (next event timeshift duration)-->
+		<widget position="453,107" size="250,10" source="session.Event_Next" render="ProgressTimeshiftLen" css="slider_small_horizontal_len" transparent="1" zPosition="3" zhide="1" >
+			<convert type="ServicePosition">Progress</convert>
+		</widget>
+		<!-- Event (now) -->
+		<!--ePixmap pixmap="skin_default/icons/icon_event.png" position="182,78" size="15,10" alphatest="on" /-->
+		<widget position="196,128" size="65,24" source="session.Event_Now" render="Label" font="Regular;22"  backgroundColor="#33000000" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget position="281,128" size="280,22" source="session.Event_Now" render="Label" font="Regular;20"  runningLine="1" noWrap="1" backgroundColor="#33000000" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget position="556,128" size="145,24" source="session.Event_Now" render="Label" font="Regular;22"  backgroundColor="#33000000" halign="right" transparent="1">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<!-- Event (next) -->
+		<widget position="196,154" size="65,24" source="session.Event_Next" render="Label" font="Regular;22"  backgroundColor="#33000000" foregroundColor="#777777" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget position="281,154" size="280,22" source="session.Event_Next" render="Label" font="Regular;20"  runningLine="1" noWrap="1" backgroundColor="#33000000" foregroundColor="#777777" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget position="556,154" size="145,24" source="session.Event_Next" render="Label" font="Regular;22"  backgroundColor="#33000000" foregroundColor="#777777" halign="right" transparent="1">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<!-- Provider name, satellite name and orbital position multiline -->
+		<widget position="780,57" size="430,64" source="session.CurrentService" render="Label" font="Regular;26" valign="bottom" halign="right" noWrap="0" backgroundColor="#33000000" transparent="1">
+			<convert type="ExtServiceInfo">ConfigProviderMultiline</convert>
+		</widget>
+		<!-- Blinking pixmap (recording in progress?) -->
+		<widget position="710,136" size="48,48" source="session.RecordState" render="Pixmap" pixmap="skin_default/icons/icon_rec.png" zPosition="1" >
+			<convert type="ConfigEntryTest">config.usage.recinfobar,True,Invert,CheckSourceBoolean</convert>
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<!-- Status Icons -->
+		<widget position="785,136" size="430,48" source="session.CurrentService" render="PixmapBox" halign="right" alphatest="on" zPosition="2" transparent="1" css="status_icons_tv">
+			<convert type="ServiceInfo">Status</convert>
+		</widget>
+		
+		<widget position="0,0" size="0,0" name="config" scrollbarMode="showOnDemand" enableWrapAround="1" itemheight="50" transparent="1" zPosition="2" />
+
+		
+		<widget position="190,72" size="85,32" name="cursor" />
+		<widget position="190,72" size="85,32" name="time" font="Regular;16" halign="center"  valign="center" transparent="1" />
+		<widget position="198,99" size="2,22" name="marker" backgroundColor="blue" zPosition="5" />
+		
+		<widget position="195,107" size="508,10" name="gauge" source="session.CurrentService" render="PositionGauge" css="slider_small_horizontal" transparent="1" zPosition="3" >
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		
+		<applet type="onShow">
+from enigma import ePoint
+from Components.config import config
+self.instance.move(ePoint(0,config.usage.infobar_standartposition.value))
+		</applet>
+	</screen>
+
+	<screen name="SeekBarIPTV" flags="wfNoBorder" position="0,510" size="1280,300" backgroundColor="transparent">
+		<!-- Background -->
+		<ePixmap position="0,0" size="1280,75" pixmap="skin_default/general/infobar.png" zPosition="-1" />
+		<eLabel position="0,75" size="1280,225" backgroundColor="background" zPosition="-1" />
+		<!-- Channel logo (Picon) -->
+		<widget position="60,102" size="125,82" source="session.CurrentService" picon_id="service_125x82" type="service" render="Picon" pixmap="skin_default/frame/frame_125x82.png" alphatest="blend" zPosition="2" transparent="1">
+			<convert type="ServiceName">PicReferenceNew,config.usage.style_clock_of_infobar,digital</convert>
+		</widget>
+		<widget position="60,102" size="125,82" source="session.CurrentService" picon_id="service_125x82" type="service" render="Picon" pixmap="skin_default/frame/frame_125x82.png" alphatest="blend" zPosition="2" transparent="1">
+			<convert type="ServiceName">PicReferenceNew,config.usage.style_clock_of_infobar,date</convert>
+		</widget>
+		<widget position="70,112" size="105,62" source="session.CurrentService" render="Label" font="Regular;16" halign="center" valign="center" zPosition="3" transparent="1" >
+			<convert type="ServiceName">PicReferenceNewAlt,service,service_125x82,nomirror,config.usage.style_clock_of_infobar,digital</convert>
+		</widget>
+		<widget position="70,112" size="105,62" source="session.CurrentService" render="Label" font="Regular;16" halign="center" valign="center" zPosition="3" transparent="1" >
+			<convert type="ServiceName">PicReferenceNewAlt,service,service_125x82,nomirror,config.usage.style_clock_of_infobar,date</convert>
+		</widget>
+		<!-- Digital Clock and Picon -->
+		<widget position="60,72" size="125,35" source="global.CurrentTime" render="Label" font="Regular;24"  halign="center" backgroundColor="#33000000" transparent="1">
+			<convert type="ClockToText">WithSeconds,config.usage.style_clock_of_infobar,digital</convert>
+		</widget>
+		<!-- Date and Picon -->
+		<widget position="75,72" size="95,35" source="global.CurrentTime" render="Label" font="Regular;24"  halign="center" transparent="1" zPosition="1">
+			<convert type="ClockToText">Format:%d/%m/%y,config.usage.style_clock_of_infobar,date</convert>
+		</widget>
+		<!-- Analog Clock -->
+		<widget position="75,72" size="95,30" source="global.CurrentTime" render="Label" font="Regular;24"  halign="center" transparent="1" zPosition="1">
+			<convert type="ClockToText">Format:%d/%m/%y,config.usage.style_clock_of_infobar,analog</convert>
+		</widget>
+		<widget position="75,103" size="95,75" source="session.CurrentService" render="Pixmap" pixmap="skin_default/frame/clock_95x75.png" zPosition="3" >
+			<convert type="ConfigEntryTest">config.usage.style_clock_of_infobar,analog</convert>
+			<convert type="ConditionalShowHide">Default</convert>
+		</widget>
+		<widget position="110,128" size="24,24" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="4" transparent="1">
+			<convert type="ClockToText">AHours,config.usage.style_clock_of_infobar,analog</convert>
+		</widget>
+		<widget position="100,118" size="44,44" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="5" transparent="1">
+			<convert type="ClockToText">AMinutes,config.usage.style_clock_of_infobar,analog</convert>
+		</widget>
+		<widget position="95,113" size="54,54" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#f23d21" zPosition="6" transparent="1">
+			<convert type="ClockToText">ASeconds,config.usage.style_clock_of_infobar,analog</convert>
+		</widget>
+		<!-- Big Analog Clock -->
+		<widget position="75,68" size="109,109" source="session.CurrentService" render="Pixmap" pixmap="skin_default/frame/clock_109x109.png" zPosition="3" >
+			<convert type="ConfigEntryTest">config.usage.style_clock_of_infobar,biganalog</convert>
+			<convert type="ConditionalShowHide">Default</convert>
+		</widget>
+		<widget position="113,106" size="34,34" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="4" transparent="1">
+			<convert type="ClockToText">AHours,config.usage.style_clock_of_infobar,biganalog</convert>
+		</widget>
+		<widget position="103,96" size="54,54" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="5" transparent="1">
+			<convert type="ClockToText">AMinutes,config.usage.style_clock_of_infobar,biganalog</convert>
+		</widget>
+		<widget position="98,91" size="64,64" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#f23d21" zPosition="6" transparent="1">
+			<convert type="ClockToText">ASeconds,config.usage.style_clock_of_infobar,biganalog</convert>
+		</widget>
+		<!-- Timeshift Timeplay -->
+		<widget position="195,77" size="145,24" source="session.Event_Now" render="Label" font="Regular;22" halign="left" noWrap="1" foregroundColor="#3366cc" backgroundColor="#3366cc" transparent="1" >
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<!-- Timeshift Remaining -->
+		<widget position="558,77" size="145,24" source="session.Event_Now" render="Label" font="Regular;22" halign="right" noWrap="1" foregroundColor="red" backgroundColor="red" transparent="1">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>
+		<!-- Warning message -->
+		<widget position="195,77" size="508,24" name="warning" font="Regular;22" halign="center" transparent="1" runningLine="2" />
+		
+		<!-- Progressbar (current event/timeshift duration)-->
+		<widget position="195,107" size="508,10" source="session.Event_Now" render="ProgressTimeshiftLen" css="slider_small_horizontal_len" transparent="1" zPosition="1" osize="250,10">
+			<convert type="ServicePosition">Progress</convert>
+		</widget>
+		<widget position="195,107" size="508,10" source="session.Event_Now" render="ProgressTimeshiftVal" css="slider_small_horizontal_val" transparent="1" zPosition="2" osize="250,10">
+			<convert type="ServicePosition">Progress</convert>
+		</widget>
+		<!-- Progressbar (next event timeshift duration)-->
+		<widget position="453,107" size="250,10" source="session.Event_Next" render="ProgressTimeshiftLen" css="slider_small_horizontal_len" transparent="1" zPosition="3" zhide="1" >
+			<convert type="ServicePosition">Progress</convert>
+		</widget>
+		<!-- Event (now) -->
+		<!--ePixmap pixmap="skin_default/icons/icon_event.png" position="182,78" size="15,10" alphatest="on" /-->
+		<widget position="196,128" size="65,24" source="session.Event_Now" render="Label" font="Regular;22"  backgroundColor="#33000000" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget position="281,128" size="280,22" source="session.Event_Now" render="Label" font="Regular;20"  runningLine="1" noWrap="1" backgroundColor="#33000000" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget position="556,128" size="145,24" source="session.Event_Now" render="Label" font="Regular;22"  backgroundColor="#33000000" halign="right" transparent="1">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<!-- Event (next) -->
+		<widget position="196,154" size="65,24" source="session.Event_Next" render="Label" font="Regular;22"  backgroundColor="#33000000" foregroundColor="#777777" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget position="281,154" size="280,22" source="session.Event_Next" render="Label" font="Regular;20"  runningLine="1" noWrap="1" backgroundColor="#33000000" foregroundColor="#777777" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget position="556,154" size="145,24" source="session.Event_Next" render="Label" font="Regular;22"  backgroundColor="#33000000" foregroundColor="#777777" halign="right" transparent="1">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<!-- Provider name, satellite name and orbital position multiline -->
+		<widget position="780,57" size="430,64" source="session.CurrentService" render="Label" font="Regular;26" valign="bottom" halign="right" noWrap="0" backgroundColor="#33000000" transparent="1">
+			<convert type="ExtServiceInfo">ConfigProviderMultiline</convert>
+		</widget>
+		<!-- Blinking pixmap (recording in progress?) -->
+		<widget position="710,136" size="48,48" source="session.RecordState" render="Pixmap" pixmap="skin_default/icons/icon_rec.png" zPosition="1" >
+			<convert type="ConfigEntryTest">config.usage.recinfobar,True,Invert,CheckSourceBoolean</convert>
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<!-- Status Icons -->
+		<widget position="785,136" size="430,48" source="session.CurrentService" render="PixmapBox" halign="right" alphatest="on" zPosition="2" transparent="1" css="status_icons_tv">
+			<convert type="ServiceInfo">Status</convert>
+		</widget>
+		
+		<widget position="0,0" size="0,0" name="config" scrollbarMode="showOnDemand" enableWrapAround="1" itemheight="50" transparent="1" zPosition="2" />
+
+		<widget position="190,72" size="85,32" name="cursor" />
+		<widget position="190,72" size="85,32" name="time" font="Regular;16" halign="center"  valign="center" transparent="1" />
+		<widget position="198,99" size="2,22" name="marker" backgroundColor="blue" zPosition="5" />
+		
+		<widget position="195,107" size="508,10" name="gauge" source="session.Event_Now" render="PositionGauge" css="slider_small_horizontal" transparent="1" zPosition="-1" >
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		
+		<applet type="onShow">
+from enigma import ePoint
+from Components.config import config
+self.instance.move(ePoint(0,config.usage.infobar_standartposition.value))
+		</applet>
+	</screen>
+
+	<!--r Main menu -->
+	<screen name="menu_id_mainmenu" css="full_screen" title="Main menu" >
+		<widget position="675,140" size="430,35" source="title" render="Label" font="Regular;28" transparent="1" zPosition="2" runningLine="2" />
+		<eLabel position="665,180" size="450,2" backgroundColor="white" zPosition="2" />
+		<widget position="650,195" size="510,400" source="menu" render="Listbox" css="menu_w485h50i50w" zPosition="2" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryTextRunningLine(pos = (20, 10), size = (395, 30), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 1 is the text menu,
+						MultiContentEntryText(pos = (415, 10), size = (50, 30), flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4), # index 2 is the netx icon
+					],
+				 "fonts": [gFont("Regular", 20)],
+				 "itemHeight": 50
+				}
+			</convert>
+		</widget>
+		<widget position="150,175" size="400,560" source="menu" render="Micon" alphatest="on" zPosition="2" transparent="1">
+			<convert type="StringListSelection">2</convert>
+		</widget>
+	</screen>
+
+	<!-- Movieplayer infobar -->
+	<screen name="MoviePlayer" flags="wfNoBorder" position="0,720" size="1280,300" title="InfoBar" backgroundColor="transparent">
+		<!-- Background -->
+		<ePixmap position="0,25" size="1280,75" pixmap="skin_default/general/infobar.png" zPosition="-1" />
+		<eLabel position="0,100" size="1280,200" backgroundColor="background" zPosition="-1" />
+		
+		<!-- Movie cover -->
+		<widget position="60,102" size="125,108" source="session.CurrentService" pixmap="skin_default/general/x_125x82.png" render="Aicon" typeTrans="0" halign="center" valign="center" alphatest="blend" zPosition="2" transparent="1">
+			<convert type="ServiceName">PicMovie,config.usage.style_clock_of_infobar_movie,digital</convert>
+			<convert type="MediaDate">Cover,Movie</convert>
+		</widget>
+		<widget position="60,102" size="125,108" source="session.CurrentService" pixmap="skin_default/general/x_125x82.png" render="Aicon" typeTrans="0" halign="center" valign="center" alphatest="blend" zPosition="2" transparent="1">
+			<convert type="ServiceName">PicMovie,config.usage.style_clock_of_infobar_movie,date</convert>
+			<convert type="MediaDate">Cover,Movie</convert>
+		</widget>
+		<!-- Digital Clock and Cover -->
+		<widget position="60,76" size="125,20" source="global.CurrentTime" render="Label" font="Regular;18"  halign="center" valign="center" backgroundColor="#33000000" transparent="1">
+			<convert type="ClockToText">WithSeconds,config.usage.style_clock_of_infobar_movie,digital</convert>
+		</widget>
+		<!-- Date and Cover -->
+		<widget position="60,76" size="125,20" source="global.CurrentTime" render="Label" font="Regular;18"  halign="center" transparent="1" zPosition="1">
+			<convert type="ClockToText">Format:%d/%m/%y,config.usage.style_clock_of_infobar_movie,date</convert>
+		</widget>
+		<!-- Analog Clock -->
+		<widget position="75,103" size="95,75" source="session.CurrentService" render="Pixmap" pixmap="skin_default/frame/clock_95x75.png" zPosition="3" >
+			<convert type="ConfigEntryTest">config.usage.style_clock_of_infobar_movie,analog</convert>
+			<convert type="ConditionalShowHide">Default</convert>
+		</widget>
+		<widget position="110,128" size="24,24" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="4" transparent="1">
+			<convert type="ClockToText">AHours,config.usage.style_clock_of_infobar_movie,analog,config.misc.statusShowInfobar,True</convert>
+		</widget>
+		<widget position="100,118" size="44,44" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="5" transparent="1">
+			<convert type="ClockToText">AMinutes,config.usage.style_clock_of_infobar_movie,analog,config.misc.statusShowInfobar,True</convert>
+		</widget>
+		<widget position="95,113" size="54,54" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#f23d21" zPosition="6" transparent="1">
+			<convert type="ClockToText">ASeconds,config.usage.style_clock_of_infobar_movie,analog,config.misc.statusShowInfobar,True</convert>
+		</widget>
+		<!-- Service name -->
+		<widget position="195,100" size="407,53" source="session.CurrentService" render="Label" font="Regular;24"  halign="left" runningLine="2" noWrap="1" backgroundColor="#33000000" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<!-- Movie length -->
+		<widget position="612,102" size="80,53" source="session.CurrentService" render="Label" font="Regular;22"  halign="right" backgroundColor="#33000000" transparent="1">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<!-- Progressbar (movie position)-->
+		<widget  position="194,130" size="508,14" source="session.CurrentService" render="PositionGauge" css="slider_small_horizontal" runningLine="0" transparent="1" zPosition="3" >
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<!-- Elapsed time -->
+		<widget position="194,150" size="100,20" source="session.CurrentService" render="Label" font="Regular;18" halign="left" valign="center" backgroundColor="#33000000" transparent="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<!-- Remaining time -->
+		<widget position="592,150" size="100,20" source="session.CurrentService" render="Label" font="Regular;18" halign="right" valign="center" backgroundColor="#33000000" transparent="1">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+		<!-- Status Icons -->
+		<widget position="770,136" size="430,53" source="session.CurrentService" render="PixmapBox" halign="right" alphatest="on" zPosition="2" transparent="1" css="status_icons_movie">
+			<convert type="ServiceInfo">StatusMovie</convert>
+		</widget>
+	</screen>
+	<!-- Movieplayer SeekBar -->
+	<screen name="SeekBarMovie" flags="wfNoBorder" position="0,510" size="1280,300" title="InfoBar" backgroundColor="transparent">
+		<!-- Background -->
+		<ePixmap position="0,25" size="1280,75" pixmap="skin_default/general/infobar.png" zPosition="-1" />
+		<eLabel position="0,100" size="1280,200" backgroundColor="background" zPosition="-1" />
+		
+		<!-- Movie cover -->
+		<widget position="60,102" size="125,108" source="session.CurrentService" pixmap="skin_default/general/x_125x82.png" render="Aicon" typeTrans="0" halign="center" valign="center" alphatest="blend" zPosition="2" transparent="1">
+			<convert type="ServiceName">PicMovie,config.usage.style_clock_of_infobar_movie,digital</convert>
+			<convert type="MediaDate">Cover,Movie</convert>
+		</widget>
+		<widget position="60,102" size="125,108" source="session.CurrentService" pixmap="skin_default/general/x_125x82.png" render="Aicon" typeTrans="0" halign="center" valign="center" alphatest="blend" zPosition="2" transparent="1">
+			<convert type="ServiceName">PicMovie,config.usage.style_clock_of_infobar_movie,date</convert>
+			<convert type="MediaDate">Cover,Movie</convert>
+		</widget>
+		<!-- Digital Clock and Cover -->
+		<widget position="60,76" size="125,20" source="global.CurrentTime" render="Label" font="Regular;18"  halign="center" valign="center" backgroundColor="#33000000" transparent="1">
+			<convert type="ClockToText">WithSeconds,config.usage.style_clock_of_infobar_movie,digital</convert>
+		</widget>
+		<!-- Date and Cover -->
+		<widget position="60,76" size="125,20" source="global.CurrentTime" render="Label" font="Regular;18"  halign="center" transparent="1" zPosition="1">
+			<convert type="ClockToText">Format:%d/%m/%y,config.usage.style_clock_of_infobar_movie,date</convert>
+		</widget>
+		<!-- Analog Clock -->
+		<widget position="75,103" size="95,75" source="session.CurrentService" render="Pixmap" pixmap="skin_default/frame/clock_95x75.png" zPosition="3" >
+			<convert type="ConfigEntryTest">config.usage.style_clock_of_infobar_movie,analog</convert>
+			<convert type="ConditionalShowHide">Default</convert>
+		</widget>
+		<widget position="110,128" size="24,24" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="4" transparent="1">
+			<convert type="ClockToText">AHours,config.usage.style_clock_of_infobar_movie,analog</convert>
+		</widget>
+		<widget position="100,118" size="44,44" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#ffffff" zPosition="5" transparent="1">
+			<convert type="ClockToText">AMinutes,config.usage.style_clock_of_infobar_movie,analog</convert>
+		</widget>
+		<widget position="95,113" size="54,54" source="global.CurrentTime" render="AnalogClock" alphatest="on" foregroundColor="#f23d21" zPosition="6" transparent="1">
+			<convert type="ClockToText">ASeconds,config.usage.style_clock_of_infobar_movie,analog</convert>
+		</widget>
+		<!-- Movie length -->
+		<widget position="612,102" size="80,53" source="session.CurrentService" render="Label" font="Regular;22"  halign="right" backgroundColor="#33000000" transparent="1">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<!-- Warning message -->
+		<widget position="194,102" size="508,53" name="warning" font="Regular;22" halign="center" transparent="1" runningLine="2" />
+		<!-- Progressbar (movie position)-->
+		<widget  position="194,130" size="508,14" name="gauge" source="session.CurrentService" render="PositionGauge" css="slider_small_horizontal" runningLine="0" transparent="1" zPosition="3" >
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<!-- Elapsed time -->
+		<widget position="194,150" size="100,20" source="session.CurrentService" render="Label" font="Regular;18" halign="left" valign="center" backgroundColor="#33000000" transparent="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<!-- Remaining time -->
+		<widget position="592,150" size="100,20" source="session.CurrentService" render="Label" font="Regular;18" halign="right" valign="center" backgroundColor="#33000000" transparent="1">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+		<!-- Status Icons -->
+		<widget position="770,136" size="430,53" source="session.CurrentService" render="PixmapBox" halign="right" alphatest="on" zPosition="2" transparent="1" css="status_icons_movie">
+			<convert type="ServiceInfo">StatusMovie</convert>
+		</widget>
+
+		<widget position="0,0" size="0,0" name="config" scrollbarMode="showOnDemand" enableWrapAround="1" itemheight="50" transparent="1" zPosition="2" />
+
+		<widget position="189,97" size="85,32" name="cursor" />
+		<widget position="189,97" size="85,32" name="time" font="Regular;16" halign="center"  valign="center" transparent="1" />
+		<widget position="197,124" size="2,22" name="marker" backgroundColor="blue" zPosition="5" />
+
+		<applet type="onShow">
+from enigma import ePoint
+from Components.config import config
+self.instance.move(ePoint(0,config.usage.infobar_standartposition.value))
+		</applet>
+	</screen>
+</skin>

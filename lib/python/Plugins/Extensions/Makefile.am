@@ -1,0 +1,17 @@
+installdir = $(pkglibdir)/python/Plugins/Extensions
+
+SUBDIRS = TuxboxPlugins SocketMMI DVDBurn  
+
+if HAVE_LIBDDVD
+SUBDIRS += DVDPlayer
+endif
+
+if VUSOLO4K
+SUBDIRS += MiniTV
+endif
+
+if VUULTIMO4K
+SUBDIRS += MiniTV
+endif
+
+install_PYTHON = __init__.py
